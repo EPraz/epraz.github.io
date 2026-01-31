@@ -15,10 +15,10 @@ function StarToggleIcon({
   on: boolean;
   onChange: (next: boolean) => void;
 }) {
-  const label = on ? "Desactivar estrellas" : "Activar estrellas";
+  const label = on ? "Disable stars" : "Enable stars";
 
   return (
-    <div className="relative group">
+    <div className="relative ">
       <button
         type="button"
         role="switch"
@@ -49,8 +49,8 @@ function StarToggleIcon({
       <span
         className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2
                    whitespace-nowrap rounded-md bg-black/80 px-2 py-1 text-[10px] text-white
-                   opacity-0 translate-y-1 transition
-                   group-hover:opacity-100 group-hover:translate-y-0
+                    transition
+                   opacity-100 translate-y-0
                    group-focus-within:opacity-100 group-focus-within:translate-y-0"
       >
         {label}
