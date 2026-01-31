@@ -25,7 +25,7 @@ const Button = ({ text, className, id }: Props) => {
       <div className="cta-button group relative">
         <div className="bg-circle" />
         <p className="text text-center ">{text}</p>
-        <div className="arrow-wrapper absolute right-3 top-1/2 -translate-y-1/2">
+        <div className="arrow-wrapper ">
           <img src="/images/arrow-down.svg" alt="arrow" className="h-4 w-4" />
         </div>
       </div>

@@ -22,19 +22,16 @@ const Experience = () => {
       });
     });
 
-    gsap.to(".timeline", {
+    gsap.to(".timeline-line", {
       transformOrigin: "bottom bottom",
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: ".timeline",
         start: "top center",
         end: "70% center",
-        onUpdate: (self) => {
-          gsap.to(".timeline", {
-            scaleY: 1 - self.progress,
-          });
-        },
+        scrub: true,
       },
+      scaleY: 0,
     });
 
     gsap.utils.toArray(".expText").forEach((text) => {
@@ -81,7 +78,9 @@ const Experience = () => {
                   <div className="flex items-start">
                     {/* Timeline wrapper */}
                     <div className="timeline-wrapper">
-                      <div className="timeline" />
+                      <div className="timeline">
+                        <span className="timeline-line" />
+                      </div>
                       <div className="gradient-line w-1 h-full" />
                     </div>
 

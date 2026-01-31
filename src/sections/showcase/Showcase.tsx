@@ -7,6 +7,7 @@ import { projects, type Status } from "../../contants";
 import LiveCTA from "./LiveCTA";
 import StatusBadge from "./StatusBadge";
 import ShowMoreText from "./ShowMoreText";
+import RepoCTA from "./RepoCTA";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,7 +18,7 @@ const Showcase = () => {
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 0.9 }
+      { opacity: 1, duration: 0.9 },
     );
     ScrollTrigger.batch(".project-card", {
       start: "top 85%",
@@ -51,7 +52,7 @@ const Showcase = () => {
                 src={p.cover}
                 alt={p.title}
                 loading="lazy"
-                className={`absolute inset-0 w-full h-full object-cover
+                className={`absolute inset-0 w-full h-full object-contain
                     transition-transform duration-500 ease-out
                     ${p.status === "coming-soon" ? "grayscale" : ""}
                     scale-[0.96] md:group-hover:scale-100`}
@@ -86,16 +87,9 @@ const Showcase = () => {
                   status={p.status as Status}
                   url={p.liveUrl}
                   id={`live-${p.title.toLowerCase().replace(/\s+/g, "-")}`}
-                  size="sm"
+                  size="md"
                 />
-                <a
-                  href={p.repoUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center h-9 px-3 rounded-lg border border-white/15 text-white/90 hover:bg-white/5 transition"
-                >
-                  Repo
-                </a>
+                <RepoCTA url={p.repoUrl} size="md" />
                 {p.demoUrl && (
                   <a
                     href={p.demoUrl}

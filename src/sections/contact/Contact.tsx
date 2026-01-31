@@ -6,6 +6,9 @@ import emailjs from "@emailjs/browser";
 const Contact = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [loading, setLoading] = useState(false);
+  const [cooldown, setCooldown] = useState(false);
+  const cooldownTimerRef = useRef<number | null>(null);
+
   const [toast, setToast] = useState<{
     type: "success" | "error";
     message: string;
@@ -21,6 +24,18 @@ const Contact = () => {
     message: "",
   });
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const EMAIL_ENABLED =
+    !!import.meta.env.VITE_APP_EMAILJS_SERVICE_ID &&
+    !!import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID &&
+    !!import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY;
+
+  const isFormValid =
+    form.name.trim().length > 0 &&
+    emailRegex.test(form.email) &&
+    form.message.trim().length > 0;
+
   useEffect(() => {
     if (toast) {
       const timeout = setTimeout(() => setToast(null), 3000);
@@ -28,49 +43,103 @@ const Contact = () => {
     }
   }, [toast]);
 
+  useEffect(() => {
+    return () => {
+      if (cooldownTimerRef.current) {
+        window.clearTimeout(cooldownTimerRef.current);
+      }
+    };
+  }, []);
+
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
+
     const cleanValue = DOMPurify.sanitize(value, {
       ALLOWED_TAGS: [],
       ALLOWED_ATTR: [],
     });
-    setForm((prevForm) => ({ ...prevForm, [name]: cleanValue }));
-    setToast({ type: "success", message: "Message sent successfully!" });
+
+    setForm((prev) => ({ ...prev, [name]: cleanValue }));
+
+    // Oculta cualquier toast mientras el usuario edita
+    if (toast) setToast(null);
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true); // Show loading state
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!EMAIL_ENABLED) {
+      console.error("[EmailJS] Missing env config", {
+        serviceId: !!import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+        templateId: !!import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+        publicKey: !!import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+      });
+
+      setToast({
+        type: "error",
+        message:
+          "Contact form is temporarily unavailable. Please email me directly.",
+      });
+      return;
+    }
+
+    // basic cooldown / rate-limit (10s)
+    if (cooldown || loading) return;
+
+    // Honeypot (bots fill hidden fields)
+    if (formRef.current) {
+      const honeypot = (
+        formRef.current.querySelector(
+          'input[name="company"]',
+        ) as HTMLInputElement | null
+      )?.value;
+
+      if (honeypot && honeypot.trim().length > 0) {
+        // Silent drop: pretend success (do not teach bots)
+        setToast({ type: "success", message: "Message sent successfully!" });
+        setForm({ name: "", email: "", message: "" });
+        return;
+      }
+    }
+
+    // Validate fields (no alerts)
+    const nameOk = form.name.trim().length > 0;
+    const emailOk = emailRegex.test(form.email.trim());
+    const messageOk = form.message.trim().length > 0;
+
+    if (!nameOk || !emailOk || !messageOk) {
+      setToast({
+        type: "error",
+        message: "Please complete all fields with a valid email.",
+      });
+      return;
+    }
+
+    if (!formRef.current) {
+      setToast({ type: "error", message: "Form not ready. Try again." });
+      return;
+    }
 
     try {
-      if (!form.name || !form.email || !form.message) {
-        alert("All fields are required.");
-        setLoading(false);
-        return;
-      }
+      setLoading(true);
+      setCooldown(true);
 
-      if (!emailRegex.test(form.email)) {
-        alert("Please enter a valid email address.");
-        setLoading(false);
-        return;
-      }
-
-      if (!formRef.current) return;
+      // release cooldown after 10s (even if request finishes earlier)
+      cooldownTimerRef.current = window.setTimeout(
+        () => setCooldown(false),
+        10_000,
+      );
 
       await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         formRef.current,
-        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
       );
 
-      // Reset form and stop loading
       setToast({ type: "success", message: "Message sent successfully!" });
-
       setForm({ name: "", email: "", message: "" });
     } catch (error) {
       console.error("EmailJS Error:", error);
@@ -141,6 +210,13 @@ const Contact = () => {
                       required
                     />
                   </div>
+                  <input
+                    type="text"
+                    name="company"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    className="hidden"
+                  />
                   {toast && (
                     <div
                       className={`mt-3 flex items-center justify-center gap-2 rounded px-4 py-3 text-white shadow text-sm  ${
@@ -170,7 +246,13 @@ const Contact = () => {
                     </div>
                   )}
 
-                  <button type="submit" disabled={loading}>
+                  <button
+                    type="submit"
+                    disabled={
+                      loading || cooldown || !isFormValid || !EMAIL_ENABLED
+                    }
+                    className="disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none"
+                  >
                     <div className="cta-button group">
                       <div className="bg-circle" />
                       <p className="text">
@@ -181,6 +263,11 @@ const Contact = () => {
                       </div>
                     </div>
                   </button>
+                  {!EMAIL_ENABLED && (
+                    <p className="text-sm text-yellow-300 text-center">
+                      Contact form unavailable.
+                    </p>
+                  )}
                 </form>
               </>
             </div>

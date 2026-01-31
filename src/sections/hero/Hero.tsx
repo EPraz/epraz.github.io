@@ -3,7 +3,7 @@ import HeroTextContent from "./HeroTextContent";
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative">
+    <section id="hero" className="relative overflow-hidden">
       {/* FONDO: detrás y sin eventos */}
       <div className="absolute inset-0 -z-10 pointer-events-none select-none">
         <img
@@ -19,11 +19,25 @@ const Hero = () => {
         <HeroTextContent />
 
         {/* RIGHT: 3D MODEL */}
-        <figure>
+        {/* <figure>
           <div className="hero-3d-layout">
             <ComputerCanvas />
           </div>
-        </figure>
+        </figure> */}
+
+        {/* Dashboard preview as background visual */}
+        <div className="hero-visual ">
+          <div className="hero-visual-card">
+            <div className="hero-visual-frame">
+              <img
+                src="/images/captura_dashboard.png"
+                alt="Dashboard preview"
+                className="hero-visual-img"
+                draggable={false}
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       <AnimatedCounter />
