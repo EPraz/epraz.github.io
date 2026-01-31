@@ -13,7 +13,7 @@ import {
 } from "./sections";
 
 const App = () => {
-  const [starsOn, setStarsOn] = useState(false);
+  const [starsOn, setStarsOn] = useState(true);
   // turnOff = true -> starsOn = false
   const handleTurnOffStars = (turnOff: boolean) => {
     setStarsOn(!turnOff);
