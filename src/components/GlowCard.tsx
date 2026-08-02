@@ -4,42 +4,39 @@ import type { ExpCardsProps, TestimonialProps } from "../contants";
 interface Props {
   children: ReactNode;
   card: ExpCardsProps | TestimonialProps;
-  index: number;
 }
-const GlowCard = ({ card, children, index }: Props) => {
-  const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
+const GlowCard = ({ card, children }: Props) => {
+  const cardRef = useRef<HTMLDivElement | null>(null);
 
-  const handleMouseMove =
-    (index: number) => (e: React.MouseEvent<HTMLDivElement>) => {
-      const card = cardRefs.current[index];
-      if (!card) return;
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    const cardElement = cardRef.current;
+    if (!cardElement) return;
 
-      //Get the mouse position relative to card
-      const rect = card.getBoundingClientRect();
-      const mouseX = e.clientX - rect.left - rect.width / 2;
-      const mouseY = e.clientY - rect.top - rect.height / 2;
+    const rect = cardElement.getBoundingClientRect();
+    const mouseX = event.clientX - rect.left - rect.width / 2;
+    const mouseY = event.clientY - rect.top - rect.height / 2;
+    const angle = (Math.atan2(mouseY, mouseX) * (180 / Math.PI) + 360) % 360;
 
-      // calc the angle from the center of the card
-      let angle = Math.atan2(mouseY, mouseX) * (180 / Math.PI);
-
-      angle = (angle + 360) % 360;
-
-      card.style.setProperty("--start", `${angle + 60}`);
-    };
+    cardElement.style.setProperty("--start", `${angle + 60}`);
+  };
 
   return (
     <div
-      ref={(el) => {
-        cardRefs.current[index] = el;
-      }}
-      onMouseMove={handleMouseMove(index)}
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
       className="card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column"
     >
       <div className="glow" />
 
       <div className="flex items-center gap-1 mb-5 ">
         {Array.from({ length: 5 }, (_, i) => (
-          <img src="/images/star.png" key={i} alt="star" className="size-5" />
+          <img
+            src="/images/star.png"
+            key={i}
+            alt=""
+            aria-hidden="true"
+            className="size-5"
+          />
         ))}
       </div>
       <div className="mb-5">

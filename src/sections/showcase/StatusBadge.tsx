@@ -1,7 +1,6 @@
 import type { Status } from "../../contants";
 
 const StatusBadge = ({ status }: { status: Status }) => {
-  if (!status) return null;
   const isLive = status === "live";
   return (
     <span

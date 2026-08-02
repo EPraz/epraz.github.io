@@ -8,13 +8,13 @@ export type Project = {
   stack: string[];
   summary: string;
   liveUrl?: string;
-  repoUrl: string;
+  repoUrl?: string;
   demoUrl?: string; // Loom/YouTube
   caseStudyUrl?: string; // Notion/README
-  status?: Status;
+  status: Status;
   layout?: "featured" | "compact";
 };
-export type Status = "live" | "coming-soon" | undefined;
+export type Status = "live" | "coming-soon";
 
 export const projects: Project[] = [
   {

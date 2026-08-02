@@ -1,55 +1,16 @@
-import { GlowCard, ResponsabilitiesCard, TitleHeader } from "../../components";
+import { useRef } from "react";
+import { TitleHeader } from "../../components";
 import { expCards } from "../../contants";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import ExperienceCard from "./ExperienceCard";
+import { useExperienceAnimations } from "./useExperienceAnimations";
 
 const Experience = () => {
-  useGSAP(() => {
-    gsap.utils.toArray(".timeline-card").forEach((card) => {
-      gsap.from(card, {
-        xPercent: -100,
-        opacity: 0,
-        transformOrigin: "left left",
-        duration: 1,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: card,
-          start: "top 80%",
-        },
-      });
-    });
-
-    gsap.to(".timeline-line", {
-      transformOrigin: "bottom bottom",
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: ".timeline",
-        start: "top center",
-        end: "70% center",
-        scrub: true,
-      },
-      scaleY: 0,
-    });
-
-    gsap.utils.toArray(".expText").forEach((text) => {
-      gsap.from(text, {
-        xPercent: 0,
-        opacity: 0,
-        duration: 1,
-        ease: "power2.inOut",
-        scrollTrigger: {
-          trigger: text,
-          start: "top 60%",
-        },
-      });
-    });
-  }, []);
+  const sectionRef = useRef<HTMLElement | null>(null);
+  useExperienceAnimations(sectionRef);
 
   return (
     <section
+      ref={sectionRef}
       id="experience"
       className="w-full md:mt-40 mt-20 section-padding xl:px-0"
     >
@@ -61,34 +22,11 @@ const Experience = () => {
 
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
-            {expCards.map((card, index) => (
-              <div key={index} className="exp-card-wrapper ">
-                <div className="xl:w-2/6">
-                  <GlowCard card={card} index={index}>
-                    <div className="flex items-center justify-center w-full h-full">
-                      <img
-                        src={card.imgPath}
-                        alt={card.title}
-                        className="max-w-[300px] max-h-[200px] object-contain rounded-lg shadow-lg"
-                      />
-                    </div>
-                  </GlowCard>
-                </div>
-                <div className="xl:w-4/6">
-                  <div className="flex items-start">
-                    {/* Timeline wrapper */}
-                    <div className="timeline-wrapper">
-                      <div className="timeline">
-                        <span className="timeline-line" />
-                      </div>
-                      <div className="gradient-line w-1 h-full" />
-                    </div>
-
-                    {/* Responsabilities */}
-                    <ResponsabilitiesCard card={card} key={`${index}_`} />
-                  </div>
-                </div>
-              </div>
+            {expCards.map((experience) => (
+              <ExperienceCard
+                key={experience.title}
+                experience={experience}
+              />
             ))}
           </div>
         </div>

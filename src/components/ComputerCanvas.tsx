@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import HeroLights from "./heroModels/HeroLights";
 import Loader from "./Loader";
 import { useMediaQuery } from "react-responsive";
+import WebGLContextGuard from "./webgl/WebGLContextGuard";
 
 const Computers = () => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
@@ -48,16 +49,9 @@ const ComputersCanvas = () => {
         powerPreference: "low-power",
         antialias: true,
       }}
-      onCreated={({ gl }) => {
-        // protege del context loss (Android/iOS)
-        gl.getContext().canvas.addEventListener(
-          "webglcontextlost",
-          (e) => e.preventDefault(),
-          { passive: false }
-        );
-      }}
-      style={{ touchAction: "pan-y" }} // permite scroll vertica
+      style={{ touchAction: "pan-y" }}
     >
+      <WebGLContextGuard />
       <Suspense fallback={<Loader />}>
         <HeroLights />
 

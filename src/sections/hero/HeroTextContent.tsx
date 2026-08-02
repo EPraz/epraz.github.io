@@ -1,22 +1,37 @@
-import { Button } from "../../components";
+import { useRef } from "react";
+import { ScrollToSectionButton } from "../../components";
 import { heroWords } from "../../contants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 const HeroTextContent = () => {
-  useGSAP(() => {
-    gsap.fromTo(
-      ".hero-text h2",
-      { y: 50, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
-    );
-  });
+  const contentRef = useRef<HTMLElement | null>(null);
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        ".hero-text h1, .hero-text h2",
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power2.inOut",
+        },
+      );
+    },
+    { scope: contentRef },
+  );
 
   return (
-    <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+    <header
+      ref={contentRef}
+      className="flex w-full flex-col justify-center px-5 md:px-20"
+    >
       <div className="flex flex-col gap-7 max-w-[720px] md:max-w-[780px] xl:max-w-[820px]">
         <div className="hero-text">
-          <h2>
+          <h1>
             Shaping{" "}
             <span className="slide">
               <span className="wrapper">
@@ -35,7 +50,7 @@ const HeroTextContent = () => {
                 ))}
               </span>
             </span>
-          </h2>
+          </h1>
           <h2>into Real Projects</h2>
           <h2>that Deliver Results</h2>
         </div>
@@ -46,11 +61,12 @@ const HeroTextContent = () => {
           real results from concept to deployment.
         </p>
 
-        <Button
+        <ScrollToSectionButton
           className="md:w-80 md:h-16 w-60 h-12"
-          id="button"
-          text="View My Projects"
-        />
+          targetId="counter"
+        >
+          View My Projects
+        </ScrollToSectionButton>
       </div>
     </header>
   );

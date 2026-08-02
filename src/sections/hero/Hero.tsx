@@ -1,4 +1,4 @@
-import { AnimatedCounter, ComputerCanvas } from "../../components";
+import { AnimatedCounter } from "../../components";
 import HeroTextContent from "./HeroTextContent";
 
 const Hero = () => {
@@ -18,14 +18,6 @@ const Hero = () => {
         {/* LEFT: HERO CONTENT */}
         <HeroTextContent />
 
-        {/* RIGHT: 3D MODEL */}
-        {/* <figure>
-          <div className="hero-3d-layout">
-            <ComputerCanvas />
-          </div>
-        </figure> */}
-
-        {/* Dashboard preview as background visual */}
         <div className="hero-visual ">
           <div className="hero-visual-card">
             <div className="hero-visual-frame">

@@ -7,7 +7,7 @@
 
 html,
 body {
-  width: 100dvw;
+  width: 100%;
   overflow-x: hidden;
   /* background-color: black; */
   background:
@@ -28,7 +28,7 @@ body {
 }
 
 section {
-  width: 100dvw;
+  width: 100%;
 }
 
 @theme {
@@ -443,7 +443,7 @@ section {
 
 /* marquee */
 .marquee {
-  width: 100dvw;
+  width: 100%;
   overflow: hidden;
   position: relative;
 }

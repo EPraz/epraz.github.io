@@ -2,12 +2,12 @@ const TitleHeader = ({ title, sub }: { title: string; sub: string }) => {
   return (
     <div className="flex flex-col items-center gap-5">
       <div className="hero-badge">
-        <span className="">{sub}</span>
+        <span>{sub}</span>
       </div>
 
-      <div className="font-semibold md:texxt-5xl md:text-5xl text-3xl text-center">
+      <h2 className="text-center text-3xl font-semibold md:text-5xl">
         {title}
-      </div>
+      </h2>
     </div>
   );
 };

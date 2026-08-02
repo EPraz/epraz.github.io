@@ -1,60 +1,46 @@
-import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
+import { Environment, Float, useGLTF } from "@react-three/drei";
 import type { TechStackIconProps } from "../../../contants";
 import { Canvas } from "@react-three/fiber";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import * as THREE from "three";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
+import WebGLContextGuard from "../../webgl/WebGLContextGuard";
 
 type Props = {
   model: TechStackIconProps;
 };
 
 const TechIcon = ({ model }: Props) => {
-  const scene = useGLTF(model.modelPath);
+  const { scene: sourceScene } = useGLTF(model.modelPath);
+  const whiteMaterial = useMemo(
+    () => new THREE.MeshStandardMaterial({ color: "white" }),
+    [],
+  );
+  const scene = useMemo(() => {
+    const sceneClone = sourceScene.clone(true);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      ".tech-card",
-      {
-        y: 50,
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 1,
-        ease: "power2.inOut",
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: "#skills",
-          start: "top center",
-        },
-      }
-    );
-  });
-
-  useEffect(() => {
-    // just to make the icon white
     if (model.name === "Interactive Developer") {
-      scene.scene.traverse((child) => {
-        if (child.isMesh && child.name === "Object_5") {
-          child.material = new THREE.MeshStandardMaterial({ color: "white" });
+      sceneClone.traverse((child) => {
+        if (child instanceof THREE.Mesh && child.name === "Object_5") {
+          child.material = whiteMaterial;
         }
       });
     }
-  });
+
+    return sceneClone;
+  }, [model.name, sourceScene, whiteMaterial]);
+
+  useEffect(() => () => whiteMaterial.dispose(), [whiteMaterial]);
 
   return (
     <Canvas>
+      <WebGLContextGuard />
       <ambientLight intensity={0.3} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
       <Environment preset="city" />
 
-      {/* <OrbitControls enableZoom={false} /> */}
-
       <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
         <group scale={model.scale} rotation={model.rotation}>
-          <primitive object={scene.scene} />
+          <primitive object={scene} />
         </group>
       </Float>
     </Canvas>

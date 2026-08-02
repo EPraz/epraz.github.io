@@ -4,9 +4,9 @@ const FeatureCards = () => {
   return (
     <section className="w-full padding-x-lg">
       <div className="mx-auto grid-3-cols">
-        {abilities.map(({ imgPath, title, desc }, index) => (
+        {abilities.map(({ imgPath, title, desc }) => (
           <div
-            key={index}
+            key={title}
             className="card-border rounded-xl p-8 flex flex-col gap-4 transition-transform duration-300 hover:-translate-y-1"
             aria-label={title}
           >

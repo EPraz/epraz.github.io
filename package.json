@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "vite build",
-    "typecheck": "tsc --noEmit",
-    "postbuild": "cp dist/index.html dist/404.html",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "postbuild": "node scripts/copy-spa-fallback.mjs",
+    "audit:conventions": "node scripts/check-source-conventions.mjs --root . --max-lines 200 --strict",
     "lint": "eslint .",
     "preview": "vite preview"
   },

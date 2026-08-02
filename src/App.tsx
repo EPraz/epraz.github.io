@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { NavBar, StarsCanvas } from "./components";
+import { lazy, Suspense } from "react";
+import StarfieldController from "./app/StarfieldController";
+import { ErrorBoundary } from "./components/errors/ErrorBoundary";
+import { SceneErrorFallback } from "./components/errors/ErrorFallbacks";
 import {
-  Contact,
   Experience,
   FeatureCards,
   Footer,
@@ -12,18 +13,13 @@ import {
   // Testimonials,
 } from "./sections";
 
-const App = () => {
-  const [starsOn, setStarsOn] = useState(true);
-  // turnOff = true -> starsOn = false
-  const handleTurnOffStars = (turnOff: boolean) => {
-    setStarsOn(!turnOff);
-  };
+const Contact = lazy(() => import("./sections/contact/Contact"));
 
+const App = () => {
   return (
     <main>
       <div className="relative z-[10]">
-        <StarsCanvas starsOn={starsOn} />
-        <NavBar handleTurnOffStars={handleTurnOffStars} starsOn={starsOn} />
+        <StarfieldController />
         <Hero />
         <Showcase />
         <Logo />
@@ -31,7 +27,26 @@ const App = () => {
         <Experience />
         <TechStack />
         {/* <Testimonials /> */}
-        <Contact />
+        <ErrorBoundary
+          fallback={(fallbackProps) => (
+            <SceneErrorFallback
+              {...fallbackProps}
+              label="The contact section"
+            />
+          )}
+        >
+          <Suspense
+            fallback={
+              <section
+                className="section-padding min-h-96"
+                aria-busy="true"
+                aria-label="Loading contact section"
+              />
+            }
+          >
+            <Contact />
+          </Suspense>
+        </ErrorBoundary>
         <Footer />
       </div>
     </main>

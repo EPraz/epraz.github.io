@@ -5,17 +5,23 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="flex flex-col justify-center md:items-start items-center">
-          <a href="https://github.com/EPraz" target="_blank">
+          <a
+            href="https://github.com/EPraz"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             Visit my GitHub
           </a>
         </div>
 
         <div className="socials flex gap-4">
-          {socialImgs.map((img, index) => (
+          {socialImgs.map((img) => (
             <a
-              key={index}
+              key={img.name}
               href={img.url}
               target="_blank"
+              rel="noreferrer noopener"
+              aria-label={img.name}
               className="icon flex items-center justify-center w-10 h-10 rounded-full"
             >
               <img

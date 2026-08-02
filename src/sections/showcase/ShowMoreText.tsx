@@ -1,5 +1,5 @@
 // components/ShowMoreText.tsx
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 
 type Props = {
   text: string;
@@ -26,30 +26,41 @@ export default function ShowMoreText({
   const [showToggle, setShowToggle] = useState(false);
   const pRef = useRef<HTMLParagraphElement | null>(null);
   const clampClass = clampClassMap[lines];
+  const contentId = useId();
 
   useEffect(() => {
     const el = pRef.current;
     if (!el) return;
-    const check = () => {
+    let animationFrame = 0;
+
+    const checkOverflow = () => {
       if (open) {
         setShowToggle(true);
         return;
       }
-      // margen pequeño por subpíxeles
+
       const overflowing = el.scrollHeight - el.clientHeight > 2;
       setShowToggle(overflowing);
     };
-    const ro = new ResizeObserver(check);
-    ro.observe(el);
-    requestAnimationFrame(check);
-    return () => ro.disconnect();
-  }, [text, open, lines]);
 
-  const id = `showmore_${Math.random().toString(36).slice(2, 9)}`;
+    const scheduleCheck = () => {
+      window.cancelAnimationFrame(animationFrame);
+      animationFrame = window.requestAnimationFrame(checkOverflow);
+    };
+
+    const resizeObserver = new ResizeObserver(scheduleCheck);
+    resizeObserver.observe(el);
+    scheduleCheck();
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame);
+      resizeObserver.disconnect();
+    };
+  }, [text, open, lines]);
 
   return (
     <div className={`relative ${className}`}>
-      <p id={id} ref={pRef} className={!open ? clampClass : ""}>
+      <p id={contentId} ref={pRef} className={!open ? clampClass : ""}>
         {text}
       </p>
 
@@ -61,8 +72,8 @@ export default function ShowMoreText({
         <button
           type="button"
           aria-expanded={open}
-          aria-controls={id}
-          onClick={() => setOpen(!open)}
+          aria-controls={contentId}
+          onClick={() => setOpen((isOpen) => !isOpen)}
           className={`mt-1 text-xs text-indigo-300 hover:text-indigo-200 underline underline-offset-2 ${buttonClassName}`}
         >
           {open ? "Show less" : "Read more"}
