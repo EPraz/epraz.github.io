@@ -19,13 +19,10 @@
 }
 
 .intro-eyebrow {
+  margin-block-end: var(--site-space-3);
   color: var(--site-muted);
   font: 400 var(--site-type-label) var(--site-font-mono);
   line-height: var(--site-leading-body);
-}
-
-.intro-eyebrow {
-  margin-block-end: var(--site-space-4);
   letter-spacing: var(--site-tracking-label);
   text-transform: uppercase;
 }
@@ -43,7 +40,7 @@
 }
 
 .intro-role {
-  margin-block-start: var(--site-space-5);
+  margin-block-start: var(--site-space-4);
   color: var(--site-text);
   font-size: var(--site-type-role);
   line-height: var(--site-leading-title);
@@ -51,7 +48,7 @@
 
 .intro-description {
   max-width: var(--site-reading-width);
-  margin-block-start: var(--site-space-5);
+  margin-block-start: var(--site-space-4);
   color: var(--site-muted);
   font-size: var(--site-type-lead);
   line-height: var(--site-leading-body);
@@ -62,7 +59,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--site-space-4) var(--site-space-6);
-  margin-block-start: var(--site-space-6);
+  margin-block-start: var(--site-space-5);
 }
 
 .intro-actions a {
@@ -104,9 +101,10 @@
 
 @media (min-width: 64rem) {
   .intro-layout {
+    min-block-size: calc(100svh - var(--site-header-space) - var(--site-rule));
     grid-template-columns: 1.15fr 0.85fr;
-    gap: var(--site-space-11);
-    padding-block: var(--site-space-10);
+    gap: var(--site-space-9);
+    padding-block: var(--site-intro-padding);
   }
 
   .intro-title span {

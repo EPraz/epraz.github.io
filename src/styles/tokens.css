@@ -19,7 +19,7 @@
   --site-type-lead: 1.125rem;
   --site-type-brand: 1.5rem;
   --site-type-title: clamp(3.25rem, 6.4vw, 5.75rem);
-  --site-type-name: clamp(3.25rem, 12vw, 8rem);
+  --site-type-name: clamp(3.25rem, min(12vw, 16svh), 8rem);
   --site-type-role: clamp(1.375rem, 2.8vw, 2rem);
   --site-type-statement: clamp(1.5rem, 2.8vw, 2.25rem);
   --site-leading-title: 1.04;
@@ -42,7 +42,15 @@
   --site-gutter: clamp(1rem, 4vw, 3rem);
   --site-width: 76rem;
   --site-reading-width: 38rem;
-  --site-header-height: 5rem;
+  --site-header-height: 4.25rem;
+  --site-header-inset: 0.75rem;
+  --site-header-space: calc(var(--site-header-height) + var(--site-header-inset) * 2 + var(--site-rule) * 2);
+  --site-nav-radius: 1.25rem;
+  --site-nav-item-radius: 0.75rem;
+  --site-nav-current-bg: color-mix(in srgb, var(--site-accent) 12%, var(--site-bg));
+  --site-nav-bg: color-mix(in srgb, var(--site-surface) 45%, var(--site-bg));
+  --site-intro-padding: clamp(1rem, 3svh, 3rem);
+  --site-portrait-height: clamp(12rem, 35svh, 23rem);
   --site-anchor-offset: 7rem;
   --site-touch-target: 2.75rem;
   --site-radius: 0.25rem;

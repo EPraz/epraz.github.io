@@ -30,11 +30,11 @@ const ProfilePanel = () => {
             </div>
           ) : (
             <img
-              src="./images/portfolio/edwin-portrait.webp"
-              srcSet="./images/portfolio/edwin-portrait-small.webp 400w, ./images/portfolio/edwin-portrait.webp 800w"
+              src="./images/portfolio/edwin-sketch.webp"
+              srcSet="./images/portfolio/edwin-sketch-small.webp 400w, ./images/portfolio/edwin-sketch.webp 800w"
               sizes="(min-width: 64rem) 368px, (min-width: 48rem) 240px, 40vw"
               width={800}
-              height={753}
+              height={752}
               alt="Illustrated portrait of Edwin Pile, smiling and wearing glasses"
               decoding="async"
               onError={() => setPortraitFailed(true)}

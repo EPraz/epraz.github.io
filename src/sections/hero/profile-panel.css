@@ -31,7 +31,7 @@
 }
 
 .intro-portrait {
-  aspect-ratio: 800 / 753;
+  aspect-ratio: 800 / 752;
   min-width: 0;
   margin: 0;
 }
@@ -103,6 +103,12 @@
 
   .intro-profile-body {
     display: block;
+    padding: var(--site-space-4);
+  }
+
+  .intro-portrait {
+    height: var(--site-portrait-height);
+    aspect-ratio: auto;
   }
 
   .intro-profile-facts {
@@ -113,8 +119,8 @@
   .intro-profile-facts > div {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: var(--site-space-5);
-    padding-block: var(--site-space-3);
+    gap: var(--site-space-4);
+    padding-block: var(--site-space-2);
     border-block-start: var(--site-rule) solid var(--site-profile-border);
   }
 }

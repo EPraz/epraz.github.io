@@ -1,10 +1,12 @@
 import { useRef, useState } from "react";
 import { navLinks } from "../contants/navLinks";
+import { useActiveSection } from "./useActiveSection";
 import "./NavBar.css";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const activeSection = useActiveSection();
 
   return (
     <header
@@ -42,7 +44,11 @@ const NavBar = () => {
           <ul>
             {navLinks.map(({ name, link }) => (
               <li key={link}>
-                <a href={link} onClick={() => setMenuOpen(false)}>
+                <a
+                  href={link}
+                  aria-current={activeSection === link ? "location" : undefined}
+                  onClick={() => setMenuOpen(false)}
+                >
                   {name}
                 </a>
               </li>

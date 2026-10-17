@@ -116,11 +116,14 @@ This portfolio is built as a production-style application, not a static showcase
 
 - **Static entry:** the introduction and navigation work independently of WebGL.
   Edwin's name, engineering role and first-person profile accompany a smiling
-  illustrated portrait and actual profile facts. Responsive WebP sources reserve
+  pencil sketch portrait and actual profile facts. Responsive WebP sources reserve
   space and fall back to initials if unavailable. Ambient depth is CSS; the
   entrance respects reduced motion. Fonts are served locally. The connected-piece
   concept is retained in local history for reuse. Stars and the contact globe
   remain unmounted while the role of a future 3D piece is reviewed.
+  The floating navigation follows the visible section with native anchors and
+  an accessible current-location indicator. Desktop type, spacing and portrait
+  scale with viewport height; mobile content retains natural vertical flow.
 
 - **Accessibility & UX:** Keyboard-focusable cards/links, alt text for icons/logos, consistent hit targets, high-contrast badges.
 
