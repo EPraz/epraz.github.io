@@ -17,18 +17,18 @@ const NavigateProject = () => {
           {navigateProject.stack.map((tool) => <li key={tool}>{tool}</li>)}
         </ul>
         <div className="section-actions">
-          <a className="site-link" href={navigateProject.cover} target="_blank" rel="noreferrer">View full page preview <span aria-hidden="true">↗</span></a>
+          <a className="site-link" href={navigateProject.liveUrl} target="_blank" rel="noreferrer">Visit website <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <figure className="featured-capture">
         <div className="navigate-image">
           {imageUnavailable ? (
-            <p role="status">Preview unavailable. NAVIGATE is a bilingual frontend landing page.</p>
+            <p role="status">Preview unavailable. Visit the website to explore NAVIGATE.</p>
           ) : (
             <img src={navigateProject.cover} alt={navigateProject.coverAlt} width={1024} height={2050} loading="lazy" decoding="async" onError={() => setImageUnavailable(true)} />
           )}
         </div>
-        <figcaption>Landing page preview · source repository private.</figcaption>
+        <figcaption>Live landing page · source repository private.</figcaption>
       </figure>
     </article>
   );

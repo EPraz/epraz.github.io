@@ -6,7 +6,9 @@ extend the ambient background, add a desktop contact rail and replace the printe
 email with a descriptive action. Hero content and the sketch remain intact.
 The owner accepted the design and authorized publication to the existing GitHub
 Pages repository on 2026-10-17. The publication refinement adds a portrait frame
-and a compact NAVIGATE frontend showcase beneath the Keelwatch flagship.
+and a compact NAVIGATE frontend showcase beneath the Keelwatch flagship. The
+owner's follow-up restores the whole Profile panel and replaces NAVIGATE's image
+preview action with a live website link.
 
 ## Run and check
 
@@ -125,3 +127,27 @@ outer workspace. They cover the added preview link, image failure and retained
 layout, portrait frame and short-screen fit, plus the integrated keyboard and
 accessibility journeys. Public-site verification follows the Pages deployment;
 external email inbox delivery remains untested.
+
+## Owner corrections after publication
+
+The requested hero frame is the original complete Profile panel, including its
+caption, portrait and Based in / Focus / Working with rows. The portrait-only
+border is removed. Earlier portrait dimensions and panel surface/shadow tokens
+are restored; the current global background, navigation and other sections stay.
+Twelve Chrome/Edge hero journeys and six fallback/reduced-motion checks pass.
+
+The owner also rejects the image-only NAVIGATE action. The landing is published
+at https://navigate-marine.vercel.app/ on Vercel; Visit website opens the actual
+bilingual SPA. The thumbnail remains illustrative. Its source stays in a private
+GitHub repository. The deploy uses a root base and SPA rewrites for legal routes,
+while its normal build remains compatible with the previous GitHub Pages base.
+The form explicitly confirms local validation without message delivery. A
+compatible router lockfile patch clears production dependency audit findings;
+existing developer-tool audit findings remain outside this hosting change.
+Lint, 13 existing tests, production build and mobile/tablet/desktop browser
+journeys verify the landing's language persistence, routes after refresh, images
+and local-only form. No actual messages are sent.
+
+Current correction evidence lives in the outer workspace's
+`.design/profile-restoration/` and `.design/navigate-live/`. Earlier publication
+notes above describe the superseded first candidate.

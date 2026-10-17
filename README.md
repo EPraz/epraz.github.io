@@ -29,12 +29,12 @@ observations, recorded in the local reconstruction workspace.
 
 ## Page and content
 
-- **Home:** personal introduction, framed pencil sketch and native section links.
+- **Home:** personal introduction, Profile panel with pencil sketch and native section links.
 - **Work:** Keelwatch is the flagship. Its real local capture,
   case study, demo, code, walkthrough, transcript and Maintenance captures expose
   the evidence and its synthetic-data/shared-account context. NAVIGATE complements
-  it with a shorter frontend landing-page showcase and full-page image preview.
-  Its source stays private; the unavailable historical demo is not linked.
+  it with a shorter frontend landing-page showcase and a live website at
+  https://navigate-marine.vercel.app/. Its source stays private.
 - **Experience:** two employment entries, education and languages aligned with
   the supplied CV. The downloadable PDF is an unchanged copy of that source.
 - **Skills:** evidence-backed capabilities and categorized tool chips. A static
