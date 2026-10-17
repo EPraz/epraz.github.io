@@ -3,7 +3,8 @@
   isolation: isolate;
 }
 
-.intro::before {
+.intro::before,
+.intro::after {
   position: absolute;
   z-index: -1;
   inset: 0;
@@ -11,10 +12,20 @@
   inset-block-start: calc(0px - var(--site-header-space));
   content: "";
   pointer-events: none;
+}
+
+.intro::before {
   background:
     radial-gradient(ellipse at 90% 15%, var(--site-ambient-warm), transparent 58%),
     radial-gradient(ellipse at 10% 85%, var(--site-ambient-cool), transparent 65%),
     var(--site-bg);
+}
+
+.intro::after {
+  background: linear-gradient(125deg, var(--site-texture-cool), var(--site-texture-warm));
+  mask-image: url("/images/portfolio/etch-marks.svg");
+  mask-size: var(--site-texture-tile) auto;
+  mask-repeat: repeat;
 }
 
 @keyframes intro-profile-arrive {
