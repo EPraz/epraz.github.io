@@ -24,9 +24,9 @@ export const supportingProjects: SupportingProjectData[] = [
     summary:
       "Plan sprints, organize backlogs and track work across a drag-and-drop board. A React interface connects project planning and retrospectives to a NestJS API and PostgreSQL.",
     stack: ["React", "TypeScript", "NestJS", "PostgreSQL", "Socket.IO"],
-    cover: "./images/portfolio/project-management-board.webp",
+    cover: "./images/portfolio/project-management-overview.webp",
     coverAlt:
-      "Project Management's live demo taskboard, with fictional Launchpad tickets arranged by status and assignee.",
+      "Project Management's live Launchpad overview, showing sprint progress, workload and recent activity with fictional demo data.",
     width: 1440,
     height: 1000,
     liveUrl: "https://project-management-murex-pi.vercel.app/",

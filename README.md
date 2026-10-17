@@ -33,12 +33,12 @@ observations, recorded in the local reconstruction workspace.
 ## Page and content
 
 - **Home:** personal introduction, Profile panel with pencil sketch and native section links.
-- **Work:** Keelwatch is the flagship. Its real local capture,
+- **Projects:** Keelwatch is the flagship. Its real local capture,
   case study, demo, code, walkthrough, transcript and Maintenance captures expose
-  the evidence and its synthetic-data/shared-account context. NAVIGATE complements
-  its deeper explanation is available in a native disclosure. Project Management
+  the evidence and its synthetic-data/shared-account context. Its deeper
+  explanation is available in a native disclosure. Project Management
   and NAVIGATE form a pair of supporting project cards with live destinations.
-  Project Management uses a current cloud-demo taskboard capture and links its
+  Project Management uses a current cloud-demo overview capture and links its
   public source; NAVIGATE opens https://navigate-marine.vercel.app/ and keeps its
   source private. The Projects navigation label and View projects action retain
   the existing `#work` anchor.

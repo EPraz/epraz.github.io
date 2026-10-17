@@ -168,7 +168,9 @@ hero styling, contact behavior and credentials are preserved.
 Project Management's https://project-management-murex-pi.vercel.app/ access was
 verified through Explore demo, the populated project list and taskboard; only
 demo authentication and reading/navigation were performed. No application records
-were created, moved or edited. The thumbnail is a real current screenshot. The
+were created, moved or edited. The thumbnail is a real current overview capture,
+taken after the progress and activity panels were visible. Its alternative text
+describes that overview. The
 card mentions fictional shared data and possible first-load wait. Its repository
 is public. NAVIGATE continues linking its live Vercel site and private source is
 not linked. No unrelated archived project is mounted.
