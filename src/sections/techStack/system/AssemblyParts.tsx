@@ -16,7 +16,8 @@ const AssemblyParts = ({ colors, onReady, onUnavailable }: AssemblyPartsProps) =
 
   useFrame((state, delta) => {
     const current = animation.current;
-    if (current.failed) return;
+    // Demand-rendered resize frames include idle time after assembly completes.
+    if (current.failed || current.progress === 1) return;
     if (!current.ready) {
       current.ready = true;
       onReady();

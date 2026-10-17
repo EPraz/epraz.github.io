@@ -27,12 +27,12 @@ const AssemblyCanvas = ({ onReady, onUnavailable }: AssemblyCanvasProps) => {
     const tokens = getComputedStyle(document.documentElement);
     const color = (name: string) => tokens.getPropertyValue(name).trim();
     const colors = { interface: color("--site-link"), api: color("--site-accent"), data: color("--site-muted"), connector: color("--site-border") };
-    const size = () => ({ width: canvas.clientWidth, height: canvas.clientHeight, top: 0, left: 0 });
+    const size = () => ({ width: container.clientWidth, height: container.clientHeight, top: 0, left: 0 });
     const observer = new ResizeObserver(() => {
       const next = size();
       state?.setSize(next.width, next.height);
     });
-    observer.observe(canvas);
+    observer.observe(container);
 
     // Catch asynchronous renderer setup too; a React boundary alone cannot do that.
     void root.configure({
