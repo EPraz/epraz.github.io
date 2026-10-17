@@ -13,16 +13,6 @@
   line-height: var(--site-leading-statement);
 }
 
-.connected-system figcaption > p:not(.section-kicker) {
-  color: var(--site-muted);
-  line-height: var(--site-leading-body);
-}
-
-.system-note {
-  margin-block-start: var(--site-space-4);
-  font-size: var(--site-type-small);
-}
-
 .system-stage {
   position: relative;
   aspect-ratio: 2 / 1;

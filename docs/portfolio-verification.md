@@ -193,3 +193,14 @@ have a small shared inset for owner comparison; app colors remain unchanged.
 Skills and diagram prose are deliberately unchanged. Nine focused journeys,
 including failed main/conflict images, pass after this refinement. These are
 local design changes, not publication approval.
+
+The owner accepted that refinement and requested a Project Management image
+trial plus the deferred Skills text condensation. The PM card now shows its
+real Launchpad taskboard, captured after both the toolbar and ticket headings
+rendered; its filename and alternative text describe the board. No demo records
+were changed. Skills retains its three capability headings, all technology groups
+and the static diagram, with shorter descriptions and a concise diagram title.
+Repeated introductory/diagram paragraphs and their unused text styles were
+removed. Before/after responsive captures remain in `.design/projects-section/`.
+Types, lint, build and nine focused browser journeys pass. Publication still
+awaits owner approval.

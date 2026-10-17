@@ -36,9 +36,9 @@ export const languages = [
 ];
 
 export const capabilities = [
-  { title: "Interfaces with care", detail: "React workflows that turn a design into usable software, including draft preservation, validation and recoverable uploads." },
-  { title: "APIs that hold together", detail: "Asynchronous processing, data modeling and migration, with permissions and change history enforced beyond the interface." },
-  { title: "Follow the issue through", detail: "Trace behavior across services, reproduce the failure, test a hypothesis and validate the fix with focused automated checks." },
+  { title: "Interfaces with care", detail: "React workflows with validation, preserved drafts and recoverable uploads." },
+  { title: "APIs that hold together", detail: "Asynchronous services, data migrations and server-enforced permissions." },
+  { title: "Follow the issue through", detail: "Trace failures across services and verify fixes with focused tests." },
 ];
 
 export const technologyGroups = [

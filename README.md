@@ -39,7 +39,7 @@ observations, recorded in the local reconstruction workspace.
   explanation and local conflict capture are available in a native disclosure.
   Explore demo is its primary action. Project Management
   and NAVIGATE form a pair of supporting project cards with live destinations.
-  Project Management uses a current cloud-demo overview capture and links its
+  Project Management uses a current cloud-demo taskboard capture and links its
   public source; NAVIGATE opens https://navigate-marine.vercel.app/ and keeps its
   source private. The Projects navigation label and View projects action retain
   the existing `#work` anchor.

@@ -7,7 +7,6 @@ const TechStack = () => (
     <header className="section-heading">
       <p className="section-kicker">Capabilities &amp; tools</p>
       <h2 id="skills-title">The pieces behind the work.</h2>
-      <p>Frontend care, backend depth and the patience to work through a difficult issue.</p>
     </header>
     <div className="capability-grid">
       {capabilities.map(({ title, detail }) => (
