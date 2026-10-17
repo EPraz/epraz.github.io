@@ -29,13 +29,7 @@ const App = () => {
             fallback={<ContactUnavailable />}
           >
             <Suspense
-              fallback={
-                <div
-                  className="section-padding min-h-96"
-                  aria-busy="true"
-                  aria-label="Loading contact section"
-                />
-              }
+              fallback={<ContactUnavailable loading />}
             >
               <Contact />
             </Suspense>

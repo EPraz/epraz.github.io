@@ -1,4 +1,5 @@
 import { contactLinks } from "../../contants/contact";
+import "./footer.css";
 
 const Footer = () => (
   <footer className="site-footer">
