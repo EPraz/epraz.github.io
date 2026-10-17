@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { TitleHeader } from "../../components";
+import TitleHeader from "../../components/TitleHeader";
 import { expCards } from "../../contants";
 import ExperienceCard from "./ExperienceCard";
 import { useExperienceAnimations } from "./useExperienceAnimations";
@@ -12,6 +12,7 @@ const Experience = () => {
     <section
       ref={sectionRef}
       id="experience"
+      tabIndex={-1}
       className="w-full md:mt-40 mt-20 section-padding xl:px-0"
     >
       <div className="w-full h-full md:px-20 px-5">

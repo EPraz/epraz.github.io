@@ -1,55 +1,64 @@
-import { navLinks } from "../contants";
-import { useScrollThreshold } from "../hooks/useScrollThreshold";
-import StarfieldToggle from "./StarfieldToggle";
+import { useRef, useState } from "react";
+import { navLinks } from "../contants/navLinks";
+import "./NavBar.css";
 
-type NavBarProps = {
-  isStarfieldEnabled: boolean;
-  onStarfieldChange: (isEnabled: boolean) => void;
-};
-
-const NavBar = ({
-  isStarfieldEnabled,
-  onStarfieldChange,
-}: NavBarProps) => {
-  const hasScrolled = useScrollThreshold();
+const NavBar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   return (
     <header
-      className={`navbar ${hasScrolled ? "scrolled" : "not-scrolled"}`}
+      className="site-header"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && menuOpen) {
+          setMenuOpen(false);
+          menuButtonRef.current?.focus();
+        }
+      }}
     >
-      <div className="inner">
-        <div className="flex items-center gap-2 md:gap-3">
-          <a className="logo" href="#hero">
-            Edwin Pile
-          </a>
-          <StarfieldToggle
-            isEnabled={isStarfieldEnabled}
-            onChange={onStarfieldChange}
-          />
-        </div>
-
-        <nav className="desktop">
+      <div className="site-header-inner">
+        <a className="site-brand" href="#hero" onClick={() => setMenuOpen(false)}>
+          Edwin Pile
+        </a>
+        <nav
+          id="primary-navigation"
+          className="site-navigation"
+          aria-label="Primary"
+          data-open={menuOpen}
+        >
           <ul>
             {navLinks.map(({ name, link }) => (
-              <li key={link} className="group">
-                <a href={link}>
-                  <span>{name}</span>
-                  <span className="underline" />
+              <li key={link}>
+                <a href={link} onClick={() => setMenuOpen(false)}>
+                  {name}
                 </a>
               </li>
             ))}
           </ul>
         </nav>
-
-        <a
-          href="./cv/CV_Edwin_Pile.pdf"
-          download
-          className="contact-btn group"
-        >
-          <div className="inner">
-            <span>Download CV</span>
-          </div>
-        </a>
+        <div className="site-header-actions">
+          <a
+            className="site-resume"
+            href="./cv/CV_Edwin_Pile.pdf"
+            download
+            aria-label="Resume (download CV)"
+          >
+            Resume
+          </a>
+          <button
+            ref={menuButtonRef}
+            className="site-menu-toggle"
+            type="button"
+            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+            aria-expanded={menuOpen}
+            aria-controls="primary-navigation"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+            <span aria-hidden="true" />
+          </button>
+        </div>
       </div>
     </header>
   );

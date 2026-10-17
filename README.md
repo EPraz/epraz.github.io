@@ -114,11 +114,10 @@ This portfolio is built as a production-style application, not a static showcase
 
 - **Animations (GSAP):** Batched `ScrollTrigger` for minimal observers; respects `prefers-reduced-motion`; one-time entrance animations.
 
-- **Background (StarsCanvas):** R3F scene tuned for **battery vs. power**:
-  - Adaptive DPR & lower point count on battery
-  - `powerPreference: "low-power"` when not charging
-  - `useMemo` for positions, slower rotation ticks
-  - Optional toggle to disable entirely (feature flag ready)
+- **Static entry:** the introduction and navigation work independently of WebGL.
+  A compressed connected-piece illustration reserves its layout and has a
+  CSS fallback; fonts are served locally. Stars and the contact globe remain
+  unmounted while the new single-scene direction is reviewed.
 
 - **Accessibility & UX:** Keyboard-focusable cards/links, alt text for icons/logos, consistent hit targets, high-contrast badges.
 
@@ -128,7 +127,9 @@ This portfolio is built as a production-style application, not a static showcase
 
 - **Images:** `object-cover`, lazy loading, consistent aspect ratios.
 - **Animations:** transform/opacity only; batching to avoid layout thrash.
-- **WebGL:** reduced cost in low-power scenarios.
+- **WebGL:** no canvas or WebGL runtime is needed for the current static entry.
+  The future animated piece must preserve that usable fallback and be measured
+  against the static baseline.
 <!-- - **Targets:** Lighthouse ≥ 90 across PWA/Perf/Best Practices/SEO on mobile. -->
 
 ---

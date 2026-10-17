@@ -1,0 +1,79 @@
+:root {
+  --site-bg: #edf2f4;
+  --site-surface: #dde7ec;
+  --site-text: #182b38;
+  --site-muted: #4d6170;
+  --site-accent: #98552f;
+  --site-on-accent: #ffffff;
+  --site-link: #285f7c;
+  --site-border: #a7bbc7;
+  --site-focus: #216184;
+  --site-accent-hover: #814625;
+
+  --site-font-display: "Bricolage Grotesque", "Arial", sans-serif;
+  --site-font-body: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --site-font-mono: "IBM Plex Mono", "Consolas", monospace;
+  --site-type-label: 0.75rem;
+  --site-type-small: 0.875rem;
+  --site-type-body: 1rem;
+  --site-type-lead: 1.125rem;
+  --site-type-brand: 1.5rem;
+  --site-type-title: clamp(3.25rem, 6.4vw, 5.75rem);
+  --site-leading-title: 1.04;
+  --site-leading-body: 1.6;
+  --site-tracking-title: -0.045em;
+  --site-tracking-label: 0.17em;
+
+  --site-space-1: 0.25rem;
+  --site-space-2: 0.5rem;
+  --site-space-3: 0.75rem;
+  --site-space-4: 1rem;
+  --site-space-5: 1.5rem;
+  --site-space-6: 2rem;
+  --site-space-7: 2.5rem;
+  --site-space-8: 3rem;
+  --site-space-9: 4rem;
+  --site-space-10: 5rem;
+  --site-space-11: 6rem;
+  --site-gutter: clamp(1rem, 4vw, 3rem);
+  --site-width: 76rem;
+  --site-reading-width: 38rem;
+  --site-header-height: 5rem;
+  --site-anchor-offset: 7rem;
+  --site-touch-target: 2.75rem;
+  --site-radius: 0.25rem;
+  --site-rule: 1px;
+  --site-focus-width: 2px;
+  --site-transition: 160ms;
+  --site-ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --site-bg: #101b25;
+  --site-surface: #1b2c38;
+  --site-text: #e7edf0;
+  --site-muted: #a9b7c2;
+  --site-accent: #e2ab83;
+  --site-on-accent: #101b25;
+  --site-link: #97bed5;
+  --site-border: #354956;
+  --site-focus: #97bed5;
+  --site-accent-hover: #f0c5a5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --site-bg: #101b25;
+    --site-surface: #1b2c38;
+    --site-text: #e7edf0;
+    --site-muted: #a9b7c2;
+    --site-accent: #e2ab83;
+    --site-on-accent: #101b25;
+    --site-link: #97bed5;
+    --site-border: #354956;
+    --site-focus: #97bed5;
+    --site-accent-hover: #f0c5a5;
+  }
+}

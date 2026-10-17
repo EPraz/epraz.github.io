@@ -1,9 +1,9 @@
-import { TitleHeader } from "../../components";
+import TitleHeader from "../../components/TitleHeader";
 import { techStackImgs } from "../../contants";
 
 const TechStack = () => {
   return (
-    <section id="skills" className="flex-center section-padding">
+    <section id="skills" tabIndex={-1} className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
           title="My Preferred Tech Stack"
