@@ -237,3 +237,15 @@ Types, lint, strict convention audit, build and eleven focused browser journeys
 pass, including the 767/768 boundary and all media failures. Fresh section and
 full-page responsive captures are in `.design/project-rows/`. The public release
 remains `bf40721`; no new deployment was performed.
+
+The owner then requested a conditional inspection of GIT/dashboard: populate
+the upcoming row only if real information exists. Its current glossary, app
+configuration and routed features identify Aster, a sales/marketing frontend
+for a fictional audio store. Source implements the lead/purchase/inventory domain
+with browser-local demo state. The old logistics README/deployment is not used.
+There is enough evidence for a brief description and React Native Web/Expo/
+TypeScript metadata. Aster now occupies an actual row with a clearly labelled
+graphic placeholder and In development status, with no link or inactive CTA.
+No dashboard files or operational data changed, and the unfinished app is not
+certified as complete. Types/lint/convention audit/build and eleven focused
+browser journeys pass. Evidence: `.design/aster-coming-soon/`. Local only.

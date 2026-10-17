@@ -50,3 +50,13 @@ export const supportingProjects: SupportingProjectData[] = [
     note: "Live bilingual website. Source repository private.",
   },
 ];
+
+export const upcomingProject = {
+  id: "aster",
+  title: "Aster",
+  category: "Sales & marketing dashboard",
+  summary:
+    "A frontend dashboard for a fictional audio store, bringing lead management, purchase tracking and product inventory into one workspace.",
+  stack: ["React Native Web", "Expo", "TypeScript"],
+  status: "In development",
+};

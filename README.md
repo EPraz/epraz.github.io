@@ -10,9 +10,10 @@ before a separate deployment.
 
 The current local branch, `feat/project-rows-local`, keeps a compact Keelwatch
 flagship above horizontal supporting project rows. Rows stack on mobile.
-Dashboard appears only as a short In development / Coming soon status line,
-with no photo, description or action. This proposal is not part of the published
-three-project release at `bf40721`.
+Aster, the current project in `GIT/dashboard`, has its own upcoming row with a
+source-backed sales/marketing description, a labelled preview placeholder and
+In development status. It has no public action or actual screenshot yet. This
+proposal is not part of the published three-project release at `bf40721`.
 
 ## Run locally
 

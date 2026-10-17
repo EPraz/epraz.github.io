@@ -17,8 +17,8 @@ const Showcase = () => (
     <FeaturedProject />
     <div className="supporting-projects">
       {supportingProjects.map((project) => <SupportingProject key={project.id} project={project} />)}
+      <UpcomingProject />
     </div>
-    <UpcomingProject />
   </section>
 );
 
