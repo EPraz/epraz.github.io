@@ -46,7 +46,8 @@ section {
 @media (prefers-reduced-motion: reduce) {
   html,
   body {
-    scroll-behavior: auto;
+    /* ScrollTrigger restores inline smooth scrolling after a refresh. */
+    scroll-behavior: auto !important;
   }
 
   #work *,

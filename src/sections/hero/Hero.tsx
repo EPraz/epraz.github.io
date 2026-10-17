@@ -1,5 +1,7 @@
 import HeroTextContent from "./HeroTextContent";
+import ProfilePanel from "./ProfilePanel";
 import "./hero.css";
+import "./hero-atmosphere.css";
 
 const Hero = () => {
   return (
@@ -9,7 +11,10 @@ const Hero = () => {
       className="intro"
       aria-labelledby="intro-title"
     >
-      <HeroTextContent />
+      <div className="intro-layout">
+        <HeroTextContent />
+        <ProfilePanel />
+      </div>
     </section>
   );
 };

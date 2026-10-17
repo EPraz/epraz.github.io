@@ -49,6 +49,15 @@
   --site-rule: 1px;
   --site-focus-width: 2px;
   --site-transition: 160ms;
+  --site-intro-enter: 600ms;
+  --site-profile-width: 26rem;
+  --site-profile-tablet-width: 42rem;
+  --site-profile-bg: color-mix(in srgb, var(--site-surface) 55%, var(--site-bg));
+  --site-profile-border: color-mix(in srgb, var(--site-link) 25%, var(--site-border));
+  --site-profile-shadow: color-mix(in srgb, var(--site-bg) 80%, transparent);
+  --site-ambient-warm: color-mix(in srgb, var(--site-accent) 14%, transparent);
+  --site-ambient-cool: color-mix(in srgb, var(--site-link) 8%, transparent);
+  --site-ambient-dot: color-mix(in srgb, var(--site-link) 18%, transparent);
   --site-ease: cubic-bezier(0.2, 0, 0, 1);
 }
 

@@ -1,10 +1,10 @@
 export const intro = {
-  greeting: "Hello, I'm",
+  greeting: "Hi, I'm",
   name: { first: "Edwin", last: "Pile" },
   role: "Software engineer",
-  statement: "I enjoy turning complex problems into software people can use.",
   description:
-    "From bringing a design to life in the frontend to tracing an issue through APIs and data models, I enjoy understanding how the pieces fit.",
+    "I build interfaces, APIs and data models that work together. I enjoy tracking down tricky issues and bringing a design to life, down to the details.",
+  focus: "Interfaces, APIs & data",
   tools: "React · TypeScript · C#/.NET",
   location: "Colorado Springs, CO, USA",
   primaryAction: { label: "View Keelwatch", href: "#work" },
