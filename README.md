@@ -58,8 +58,9 @@ labels that can be dismissed with Escape.
 
 The owner selected the static system diagram over the optional assembly. The
 page has no 3D controls or WebGL dependency downloads. Earlier scene code remains
-in Git history. The contact section displays “Send an email” instead of printing
-the address; its real mailto destination and native browser behavior remain.
+in Git history. Below the form, “Prefer your email app?” offers a secondary
+email action without printing the address. Loading and recovery views retain
+direct email access; the real mailto destination and native behavior remain.
 
 ## Contact configuration
 

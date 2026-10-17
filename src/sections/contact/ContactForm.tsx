@@ -1,5 +1,6 @@
 import ContactFeedback from "./ContactFeedback";
 import ContactField from "./ContactField";
+import { contactLinks } from "../../contants/contact";
 import { useContactForm } from "./useContactForm";
 
 const ContactForm = () => {
@@ -18,7 +19,8 @@ const ContactForm = () => {
       {feedback && <ContactFeedback feedback={feedback} />}
       <button type="submit" disabled={isSubmitDisabled} className="site-button site-button-primary">{buttonLabel}</button>
       <p id="contact-help" role="status" className="contact-help">
-        {isCoolingDown ? "Please wait a few seconds before sending another message." : "You can also use the email link to get in touch."}
+        {isCoolingDown && <>Please wait a few seconds before sending another message.<br /></>}
+        <a className="site-link" href={contactLinks.mailto}>Prefer your email app?</a>
       </p>
       {!isEmailEnabled && <p className="contact-unavailable">The form is temporarily unavailable. Please use the email link.</p>}
     </form>

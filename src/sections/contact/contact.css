@@ -11,12 +11,6 @@
   line-height: var(--site-leading-body);
 }
 
-.contact-email {
-  margin-block-end: var(--site-space-3);
-  border-color: var(--site-accent);
-  color: var(--site-accent);
-}
-
 .contact-form {
   display: grid;
   gap: var(--site-space-5);
@@ -85,6 +79,13 @@
   color: var(--site-muted);
   font-size: var(--site-type-small);
   line-height: var(--site-leading-body);
+}
+
+.contact-help .site-link {
+  width: fit-content;
+  padding: 0;
+  background: transparent;
+  font-weight: normal;
 }
 
 .contact-honeypot {

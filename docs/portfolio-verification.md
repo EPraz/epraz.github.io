@@ -65,6 +65,8 @@ Results cover:
   clipping without creating a second scroll container that defeats stickiness.
 - Descriptive email actions retain their mailto target in normal, loading,
   failed-chunk and unconfigured variants; the personal address is not printed.
+  The normal form presents “Prefer your email app?” as a secondary link below
+  its submit action, including during retry cooldown.
 
 For the contact simulation, `verify-polish-contact.mjs` expects local QA
 servers on 5178 (dummy EmailJS identifiers) and 5179 (no identifiers). Inspect its
@@ -84,7 +86,7 @@ advisory. Older scene sources outside this page remain archived and unmounted;
 dependencies were not broadly migrated. The CSS background is static, and the
 existing reduced-motion behavior is preserved. No field-performance claim is made.
 
-“Send an email” changes how the address is presented, not its secrecy: the real
+The descriptive email action changes presentation, not secrecy: the real
 destination remains in the mailto link. Browser destination previews are native
 browser UI and are not overridden with script-based navigation.
 Rail labels support Escape for both hover-only and keyboard-focus interaction;
