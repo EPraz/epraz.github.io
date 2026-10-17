@@ -20,6 +20,19 @@ const NavBar = () => {
         <a className="site-brand" href="#hero" onClick={() => setMenuOpen(false)}>
           Edwin Pile
         </a>
+        <button
+          ref={menuButtonRef}
+          className="site-menu-toggle"
+          type="button"
+          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+          aria-expanded={menuOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+        </button>
         <nav
           id="primary-navigation"
           className="site-navigation"
@@ -36,29 +49,14 @@ const NavBar = () => {
             ))}
           </ul>
         </nav>
-        <div className="site-header-actions">
-          <a
-            className="site-resume"
-            href="./cv/CV_Edwin_Pile.pdf"
-            download
-            aria-label="Resume (download CV)"
-          >
-            Resume
-          </a>
-          <button
-            ref={menuButtonRef}
-            className="site-menu-toggle"
-            type="button"
-            aria-label={menuOpen ? "Close navigation" : "Open navigation"}
-            aria-expanded={menuOpen}
-            aria-controls="primary-navigation"
-            onClick={() => setMenuOpen((open) => !open)}
-          >
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-            <span aria-hidden="true" />
-          </button>
-        </div>
+        <a
+          className="site-resume"
+          href="./cv/CV_Edwin_Pile.pdf"
+          download
+          aria-label="Resume (download CV)"
+        >
+          Resume
+        </a>
       </div>
     </header>
   );

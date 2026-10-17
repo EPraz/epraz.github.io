@@ -19,6 +19,7 @@
 
 .site-brand {
   display: inline-flex;
+  margin-inline-end: auto;
   align-items: center;
   min-height: var(--site-touch-target);
   color: var(--site-text);
@@ -58,12 +59,6 @@
   min-height: var(--site-touch-target);
   padding-inline: var(--site-space-2);
   color: var(--site-muted);
-}
-
-.site-header-actions {
-  display: flex;
-  align-items: center;
-  gap: var(--site-space-3);
 }
 
 .site-resume,
@@ -114,6 +109,7 @@
     display: block;
     padding: 0;
     border: 0;
+    margin-inline: auto;
   }
 
   .site-navigation ul {
