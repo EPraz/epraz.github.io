@@ -35,6 +35,32 @@
   height: 100%;
 }
 
+.system-stage[data-ready="true"] > .system-diagram {
+  visibility: hidden;
+}
+
+.system-canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.system-feedback {
+  position: absolute;
+  inset-inline: var(--site-space-3);
+  inset-block-end: 0;
+  padding: var(--site-space-2);
+  background: var(--site-bg);
+  color: var(--site-muted);
+  font-size: var(--site-type-small);
+}
+
+.system-controls {
+  min-height: var(--site-touch-target);
+  color: var(--site-muted);
+  font-size: var(--site-type-small);
+  line-height: var(--site-leading-body);
+}
+
 .system-legend {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

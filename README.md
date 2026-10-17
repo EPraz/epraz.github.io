@@ -1,164 +1,92 @@
 # Edwin Pile — Software Engineer Portfolio
 
-I build reliable operational software—from clear interfaces and APIs to data
-models, authorization, and production delivery. My primary tools include
-**React, React Native, TypeScript, NestJS, C#/.NET, and PostgreSQL**.
+A single-page portfolio built with React 19, TypeScript, Vite 7 and Tailwind CSS 4.
+Public content is in English. The current iteration is reviewed locally before
+any decision to publish it.
 
-**Live:** _coming soon_
+## Run locally
 
-**Contact:** epilepra@gmail.com · [LinkedIn](https://www.linkedin.com/in/edwin-pile-583652234/) · [GitHub](https://github.com/EPraz)
+Use Node 20 or newer:
 
----
-
-## Portfolio Strategy
-
-The next portfolio iteration is guided by:
-
-- [`docs/portfolio-strategy.md`](docs/portfolio-strategy.md) — positioning,
-  flagship scope, evidence standards, and engineering guardrails.
-- [`docs/maritime-operations-roadmap.md`](docs/maritime-operations-roadmap.md) —
-  phased, verifiable execution checklist.
-
----
-
-## Highlights
-
-- **Web & Mobile:** React + React Native apps with real-world UX, performance, and reliability goals.
-- **APIs & Cloud:** REST/GraphQL, SQL Server/NoSQL, Azure (Functions, Web Apps), CI/CD.
-- **Quality:** xUnit/Jest, integration tests, code reviews, and documentation.
-- **Performance by design:** GPU-conscious animations (GSAP), adaptive WebGL (R3F), responsive grids, lazy assets.
-
----
-
-## Tech Stack
-
-**Frontend:** React, React Native (Expo), TypeScript, Tailwind/MUI  
-**Backend:** .NET (C#), Node.js/NestJS, REST/GraphQL  
-**Data:** PostgreSQL, SQL Server, NoSQL  
-**Cloud/DevOps:** Azure (Functions, Web Apps, API Management), CI/CD, Git Flow  
-**Testing:** xUnit, Jest  
-**Viz:** Charts.js/Recharts (as needed)
-
----
-
-## Projects (Selection)
-
-- **Keelwatch — featured project:** an independent maritime operations workspace
-  connecting Fleet, Compliance, Crew, Maintenance and Activity. My contribution
-  spans React workflows, NestJS APIs, PostgreSQL rules, permissions and history.
-  [Case study](https://github.com/EPraz/keelwatch/blob/master/docs/flagship/CASE_STUDY.md) ·
-  [Demo](https://keelwatch-chi.vercel.app/sign-in) ·
-  [Code and recordings](https://github.com/EPraz/keelwatch) ·
-  [Integration verification](docs/keelwatch-integration.md)
-
-> Keelwatch leads Work as a featured card. Other projects retain the existing
-> grid with status badges and CTAs; typed constants supply the project content.
-
-- **Project Management App** — Full-stack agile platform (Azure DevOps–inspired)
-  Stack: React · NestJS · Prisma · PostgreSQL · Supabase Auth · WebSockets · Docker · Charts.js
-  _Status: Demo offline_ · [Repo](https://github.com/EPraz/projectManagement)
-
-- **Logistics Dashboard** — Cross-platform operations dashboard  
-  Stack: React Native · Expo · Expo Router · TypeScript · NativeWind · Victory Native · React Native Web  
-  _Status: Live_ · [Repo](https://github.com/EPraz/dashboard) · [Live](https://dashboard-one-rose-14.vercel.app/dashboard/)
-
-- **Navigate** — i18n routing & validated forms (SPA)  
-  Stack: React · TypeScript · Vite · React Router · Tailwind CSS · Material Tailwind · i18next · React Hook Form · Yup · Vitest  
-  _Status: Demo offline_
-
-- **Restaurant Landing Page** — Responsive marketing site  
-  Stack: React (Create React App)  
-  _Status: Live_ · [Repo](https://github.com/EPraz/restaurant-website) · [Live](https://epraz.github.io/restaurant-website/)
-
-- **Camera Viewer App (RN)** — Multi-camera monitoring UI prototype  
-  Stack: React Native · Expo · TypeScript  
-  _Status: Live (Prototype)_ · [Repo](https://github.com/EPraz/camera-ui-mvp) · [Live](https://camera-ui-mvp.vercel.app/)
-
-<!-- - **Project Management App** — Full-stack agile platform (Azure DevOps–inspired)
-  Stack: React · NestJS · Prisma · PostgreSQL · Supabase Auth
-  _Status: Live_ · [Repo](https://github.com/EPraz/projectManagement) · [Live](https://projectmanagement.fly.dev)
-
-- **Multi-Tenant E-commerce Admin (RN)** — Vendor dashboards & analytics
-  Stack: React Native · Expo · NestJS · PostgreSQL · Stripe API
-  _Status: Coming soon_ · [Repo](https://github.com/EPraz/ecommerce-admin-rn)
-
-- **CCTV Viewer App (RN)** — Multi-camera UI prototype
-  Stack: React Native · Expo · TypeScript
-  _Status: Coming soon_ · [Repo](https://github.com/EPraz/cctv-viewer-rn)
-
-- **Services Marketplace (RN)** — Clients ↔ Providers MVP
-  Stack: React Native · Expo · NestJS · PostgreSQL
-  _Status: Coming soon_ · [Repo](https://github.com/EPraz/marketplace-rn)
-
-- **Offline Orders System (RN)** — POS-style, offline-first
-  Stack: React Native · Expo · NestJS · PostgreSQL · AsyncStorage
-  _Status: Coming soon_ · [Repo](https://github.com/EPraz/offline-orders-rn)
-
-- **Organization Admin Hub (RN)** — Centralized org management
-  Stack: React Native · Expo · NestJS · PostgreSQL
-  _Status: Coming soon_ · [Repo](https://github.com/EPraz/admin-hub-rn) -->
-
----
-
-## Architecture &
-
-This portfolio is built as a production-style application, not a static showcase. The focus is maintainability, performance, and real-world constraints.
-
-- **Content-driven UI:** Cards/sections render from typed constants for easy updates.  
-  Update these to maintain the site without touching components:
-  - `contants/projects.ts` — project cards (title, stack, links, status)
-  - `contants/keelwatch.ts` — featured Keelwatch summary, evidence and links
-  - `contants/index.ts` — `heroWords`, `abilities`, `techStackImgs`, `counterItems`, `socialImgs`, `expCards`
-
-- **Uniform project grid:** Same-sized cards, fixed media aspect ratio, clamped text, consistent CTAs (Live/Repo/Demo).
-
-- **Animations (GSAP):** Batched `ScrollTrigger` for minimal observers; respects `prefers-reduced-motion`; one-time entrance animations.
-
-- **Static entry:** the introduction and navigation work independently of WebGL.
-  Edwin's name, engineering role and first-person profile accompany a smiling
-  pencil sketch portrait and actual profile facts. Responsive WebP sources reserve
-  space and fall back to initials if unavailable. Ambient depth is CSS; the
-  entrance respects reduced motion. Fonts are served locally. The connected-piece
-  concept is retained in local history for reuse. Stars and the contact globe
-  remain unmounted while the role of a future 3D piece is reviewed.
-  The floating navigation follows the visible section with native anchors and
-  an accessible current-location indicator. Desktop type, spacing and portrait
-  scale with viewport height; mobile content retains natural vertical flow.
-
-- **Accessibility & UX:** Keyboard-focusable cards/links, alt text for icons/logos, consistent hit targets, high-contrast badges.
-
----
-
-## Performance & Accessibility Notes
-
-- **Images:** `object-cover`, lazy loading, consistent aspect ratios.
-- **Animations:** transform/opacity only; batching to avoid layout thrash.
-- **WebGL:** no canvas or WebGL runtime is needed for the current static entry.
-  The future animated piece must preserve that usable fallback and be measured
-  against the static baseline.
-<!-- - **Targets:** Lighthouse ≥ 90 across PWA/Perf/Best Practices/SEO on mobile. -->
-
----
-
-## Thank you
-
-<!-- ## Getting Started
-
-**Prerequisites:** Node 18+ and pnpm/yarn/npm.
-
-```bash
-# install
+```sh
 npm install
+npm run dev
+```
 
-# run dev
-npm dev
+For the production build:
 
-# build
-npm build
+```sh
+npm run typecheck
+npm run lint
+npm run audit:conventions
+npm run build
+npm run preview
+```
 
-# preview
-npm preview
+There is no configured unit-test runner. The reconstruction is verified through
+browser journeys, accessibility checks, failure simulations and performance
+observations, recorded in the local reconstruction workspace.
 
-# lint (if configured)
-npm lint
-``` -->
+## Page and content
+
+- **Home:** personal introduction, pencil sketch and native section links.
+- **Work:** Keelwatch is the only featured project. Its real local capture,
+  case study, demo, code, walkthrough, transcript and Maintenance captures expose
+  the evidence and its synthetic-data/shared-account context.
+- **Experience:** two employment entries, education and languages aligned with
+  the supplied CV. The downloadable PDF is an unchanged copy of that source.
+- **Skills:** evidence-backed capabilities and categorized tool chips. An optional
+  connected-system assembly illustrates interface, API and data responsibilities.
+- **About:** development, debugging, careful frontend work, reading and exercise.
+- **Contact:** direct email, LinkedIn and GitHub, plus an EmailJS form with field
+  validation, pending feedback, duplicate prevention and recoverable errors.
+
+Typed content lives in `src/contants/keelwatch.ts`, `professional.ts` and
+`contact.ts`. The existing `contants` spelling is intentional. `src/App.tsx`
+composes the sections. Shared CSS tokens live in `src/styles/tokens.css`, with
+section primitives in `src/styles/sections.css` and section-owned styles nearby.
+Older project/scene sources remain outside the mounted page; they are not
+presented as completed work.
+
+## Optional 3D
+
+The static diagram is the default. Only the visitor's **Play 3D assembly** action
+loads the graphics module. Text, links and contact never require WebGL. The
+scene uses procedural geometry, one context, DPR capped at 1.25 and a bounded
+assembly followed by demand-driven idle rendering. It unmounts outside the
+viewport or while the document is hidden. Reduced motion, data saving, constrained
+hardware/battery, failed loading, unavailable WebGL, context loss or sustained
+slow frames retain the static diagram. No stars, globe, model or texture downloads
+are part of this journey.
+
+## Contact configuration
+
+Set these public EmailJS identifiers in a local Vite environment file:
+
+```text
+VITE_APP_EMAILJS_SERVICE_ID
+VITE_APP_EMAILJS_TEMPLATE_ID
+VITE_APP_EMAILJS_PUBLIC_KEY
+```
+
+Do not commit environment files. Without configuration the form explains its
+availability and direct contact remains usable. Validation is local; send errors
+retain the draft, and the form provides persistent feedback and a retry cooldown.
+Browser QA intercepts the EmailJS request and simulates success/failure; it does
+not send messages or certify the external mailbox delivery service.
+
+## Sources and local delivery
+
+Keelwatch evidence: [case study](https://github.com/EPraz/keelwatch/blob/master/docs/flagship/CASE_STUDY.md),
+[demo](https://keelwatch-chi.vercel.app/sign-in),
+[repository and recording](https://github.com/EPraz/keelwatch).
+
+Contact: [email](mailto:epilepra@gmail.com),
+[LinkedIn](https://www.linkedin.com/in/edwin-pile-583652234/),
+[GitHub](https://github.com/EPraz).
+
+The reconstruction spec, tickets and owner approvals remain Local Markdown under
+`.scratch/portfolio-reconstruction/`. Visual and QA artifacts are under `.design/`.
+These are local working artifacts, not new remote issues or a deployment. The
+historical strategy documents in `docs/` describe earlier planning and do not
+override the current local specification and approved hero.

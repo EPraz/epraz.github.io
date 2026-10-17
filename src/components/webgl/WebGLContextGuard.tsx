@@ -1,12 +1,13 @@
 import { useThree } from "@react-three/fiber";
 import { useEffect } from "react";
 
-const WebGLContextGuard = () => {
+const WebGLContextGuard = ({ onContextLost }: { onContextLost?: () => void }) => {
   const canvas = useThree(({ gl }) => gl.domElement);
 
   useEffect(() => {
     const preventContextLoss: EventListener = (event) => {
       event.preventDefault();
+      onContextLost?.();
     };
 
     canvas.addEventListener("webglcontextlost", preventContextLoss, {
@@ -16,7 +17,7 @@ const WebGLContextGuard = () => {
     return () => {
       canvas.removeEventListener("webglcontextlost", preventContextLoss);
     };
-  }, [canvas]);
+  }, [canvas, onContextLost]);
 
   return null;
 };
