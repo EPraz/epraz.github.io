@@ -8,12 +8,11 @@ The owner approved the Projects layout, project captures and concise Skills copy
 for publication. Future Dashboard/Coming soon changes will be reviewed locally
 before a separate deployment.
 
-The current local branch, `feat/dashboard-placeholder-local`, reserves a fourth
-project as Dashboard / Coming soon / In development. It has no photo, product
-description or action yet. Keelwatch stays featured; the supporting grid uses
-three desktop columns, two tablet columns plus a full-width upcoming row, and a
-single mobile column. This proposal is not part of the published three-project
-release at `bf40721`.
+The current local branch, `feat/project-rows-local`, keeps a compact Keelwatch
+flagship above horizontal supporting project rows. Rows stack on mobile.
+Dashboard appears only as a short In development / Coming soon status line,
+with no photo, description or action. This proposal is not part of the published
+three-project release at `bf40721`.
 
 ## Run locally
 
@@ -46,7 +45,7 @@ observations, recorded in the local reconstruction workspace.
   the evidence and its synthetic-data/shared-account context. Its deeper
   explanation and local conflict capture are available in a native disclosure.
   Explore demo is its primary action. Project Management
-  and NAVIGATE form a pair of supporting project cards with live destinations.
+  and NAVIGATE form a pair of supporting project rows with live destinations.
   Project Management uses a current cloud-demo taskboard capture and links its
   public source; NAVIGATE opens https://navigate-marine.vercel.app/ and keeps its
   source private. The Projects navigation label and View projects action retain

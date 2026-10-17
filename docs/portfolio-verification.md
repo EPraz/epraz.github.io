@@ -227,3 +227,13 @@ journeys, including the 1279/1280 breakpoint boundary, and four image-failure
 journeys pass. Types, lint, strict convention audit and build pass. This fourth
 project proposal stays local until separate approval. Evidence is in the outer
 workspace at `.design/dashboard-placeholder/`.
+
+The owner rejected the three-column design and chose a compact flagship followed
+by horizontal supporting rows. The current local proposal is on
+`feat/project-rows-local`: images/text sit alongside each other from 768 px and
+stack below that, technology lists wrap as plain metadata and Dashboard is a
+small independent status line. All project content and destinations are retained.
+Types, lint, strict convention audit, build and eleven focused browser journeys
+pass, including the 767/768 boundary and all media failures. Fresh section and
+full-page responsive captures are in `.design/project-rows/`. The public release
+remains `bf40721`; no new deployment was performed.

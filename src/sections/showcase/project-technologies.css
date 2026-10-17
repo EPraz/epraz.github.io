@@ -1,0 +1,15 @@
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--site-space-2) var(--site-space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--site-muted);
+  font-size: var(--site-type-small);
+  line-height: var(--site-leading-body);
+}
+
+.project-technologies li {
+  white-space: nowrap;
+}

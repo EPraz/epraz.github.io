@@ -14,7 +14,7 @@ const FeaturedProject = () => {
           <p className="featured-subtitle">{keelwatch.subtitle}</p>
           <p className="featured-role">{keelwatch.role}</p>
           <p>{keelwatch.summary}</p>
-          <ul className="technology-list" aria-label="Keelwatch technologies">
+          <ul className="project-technologies" aria-label="Keelwatch technologies">
             {keelwatch.stack.map((tool) => <li key={tool}>{tool}</li>)}
           </ul>
           <div className="section-actions">

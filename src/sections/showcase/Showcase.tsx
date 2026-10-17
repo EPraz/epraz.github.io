@@ -3,6 +3,7 @@ import SupportingProject from "./SupportingProject";
 import UpcomingProject from "./UpcomingProject";
 import { supportingProjects } from "../../contants/selectedProjects";
 import "./showcase.css";
+import "./project-technologies.css";
 
 const Showcase = () => (
   <section id="work" tabIndex={-1} aria-labelledby="projects-title" className="site-section">
@@ -16,8 +17,8 @@ const Showcase = () => (
     <FeaturedProject />
     <div className="supporting-projects">
       {supportingProjects.map((project) => <SupportingProject key={project.id} project={project} />)}
-      <UpcomingProject />
     </div>
+    <UpcomingProject />
   </section>
 );
 

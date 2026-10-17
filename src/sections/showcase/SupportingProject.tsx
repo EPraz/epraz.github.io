@@ -19,10 +19,10 @@ const SupportingProject = ({ project }: { project: SupportingProjectData }) => {
         <p className="section-kicker">{project.category}</p>
         <h3 id={titleId}>{project.title}</h3>
         <p className="supporting-project-summary">{project.summary}</p>
-        <ul className="technology-list" aria-label={`${project.title} technologies`}>
+        <ul className="project-technologies" aria-label={`${project.title} technologies`}>
           {project.stack.map((tool) => <li key={tool}>{tool}</li>)}
         </ul>
-        <div className="section-actions supporting-project-actions">
+        <div className="section-actions">
           <a className="site-link" href={project.liveUrl} target="_blank" rel="noreferrer">{project.liveLabel} <span aria-hidden="true">↗</span></a>
           {project.repoUrl && <a className="site-link" href={project.repoUrl} target="_blank" rel="noreferrer">View code</a>}
         </div>
