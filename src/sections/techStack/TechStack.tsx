@@ -1,5 +1,6 @@
 import { capabilities, technologyGroups } from "../../contants/professional";
 import "./tech-stack.css";
+import ConnectedSystem from "./system/ConnectedSystem";
 
 const TechStack = () => (
   <section id="skills" tabIndex={-1} aria-labelledby="skills-title" className="site-section">
@@ -23,6 +24,7 @@ const TechStack = () => (
         </div>
       ))}
     </div>
+    <ConnectedSystem />
   </section>
 );
 
