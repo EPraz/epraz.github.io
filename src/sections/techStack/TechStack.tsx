@@ -1,46 +1,29 @@
-import TitleHeader from "../../components/TitleHeader";
-import { techStackImgs } from "../../contants";
+import { capabilities, technologyGroups } from "../../contants/professional";
+import "./tech-stack.css";
 
-const TechStack = () => {
-  return (
-    <section id="skills" tabIndex={-1} className="flex-center section-padding">
-      <div className="w-full h-full md:px-10 px-5">
-        <TitleHeader
-          title="My Preferred Tech Stack"
-          sub="🤝 The Skills I Bring to the Table"
-        />
-
-        <div className="tech-grid">
-          {techStackImgs.map((icon, index) => (
-            <div
-              key={index}
-              className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg transition-transform duration-300 hover:-translate-y-1 focus-within:-translate-y-1"
-              tabIndex={0}
-              aria-label={icon.name}
-              title={icon.name}
-            >
-              <div className="tech-card-content flex flex-col items-center justify-center gap-3 py-6">
-                <div className="tech-icon-wrapper flex items-center justify-center">
-                  <img
-                    src={icon.imgPath}
-                    alt={icon.name}
-                    width={96}
-                    height={96}
-                    loading="lazy"
-                    className="w-[80px] h-[80px] md:w-[96px] md:h-[96px] object-contain"
-                  />
-                </div>
-
-                <div className="padding-x w-full text-center">
-                  <p className="text-white text-sm md:text-base">{icon.name}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+const TechStack = () => (
+  <section id="skills" tabIndex={-1} aria-labelledby="skills-title" className="site-section">
+    <header className="section-heading">
+      <p className="section-kicker">Capabilities &amp; tools</p>
+      <h2 id="skills-title">The pieces behind the work.</h2>
+      <p>Frontend care, backend depth and the patience to work through a difficult issue.</p>
+    </header>
+    <div className="capability-grid">
+      {capabilities.map(({ title, detail }) => (
+        <article key={title}><h3>{title}</h3><p>{detail}</p></article>
+      ))}
+    </div>
+    <div className="technology-groups">
+      {technologyGroups.map(({ title, tools }) => (
+        <div className="technology-group" key={title}>
+          <h3>{title}</h3>
+          <ul className="technology-list" aria-label={title}>
+            {tools.map((tool) => <li key={tool}>{tool}</li>)}
+          </ul>
         </div>
-      </div>
-    </section>
-  );
-};
+      ))}
+    </div>
+  </section>
+);
 
 export default TechStack;

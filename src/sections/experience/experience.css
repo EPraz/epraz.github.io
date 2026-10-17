@@ -1,0 +1,108 @@
+#experience {
+  border-block: var(--site-rule) solid var(--site-border);
+}
+
+.career-list {
+  display: grid;
+  gap: var(--site-space-8);
+  padding: 0;
+  list-style: none;
+}
+
+.career-entry {
+  display: grid;
+  gap: var(--site-space-4);
+}
+
+.career-period,
+.education-period {
+  color: var(--site-accent);
+  font: var(--site-type-small) var(--site-font-mono);
+  line-height: var(--site-leading-body);
+}
+
+.career-entry h3 {
+  font-family: var(--site-font-display);
+  font-size: var(--site-type-statement);
+  line-height: var(--site-leading-statement);
+}
+
+.career-role {
+  margin-block-start: var(--site-space-2);
+  color: var(--site-link);
+}
+
+.career-summary {
+  margin-block: var(--site-space-4) var(--site-space-5);
+  color: var(--site-muted);
+  line-height: var(--site-leading-body);
+}
+
+.career-contributions {
+  display: grid;
+  gap: var(--site-space-4);
+  padding: 0;
+  list-style: none;
+  color: var(--site-muted);
+  line-height: var(--site-leading-body);
+}
+
+.career-contributions strong {
+  color: var(--site-text);
+  font-weight: 500;
+}
+
+.career-subheading {
+  margin-block-end: var(--site-space-5);
+  font-family: var(--site-font-display);
+  font-size: var(--site-type-brand);
+}
+
+.education-layout {
+  display: grid;
+  gap: var(--site-space-7);
+  margin-block: var(--site-space-8);
+  padding-block-start: var(--site-space-7);
+  border-block-start: var(--site-rule) solid var(--site-border);
+}
+
+.education-list {
+  display: grid;
+  gap: var(--site-space-5);
+  padding: 0;
+  list-style: none;
+}
+
+.education-list h4 {
+  margin-block: var(--site-space-2);
+  font-weight: 500;
+}
+
+.education-list li > p:last-child,
+.language-list dd {
+  color: var(--site-muted);
+  line-height: var(--site-leading-body);
+}
+
+.language-list {
+  display: grid;
+  gap: var(--site-space-3);
+}
+
+.language-list > div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--site-space-5);
+}
+
+@media (min-width: 48rem) {
+  .career-entry {
+    grid-template-columns: 1fr 2fr;
+    gap: var(--site-space-8);
+  }
+
+  .education-layout {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--site-space-9);
+  }
+}
