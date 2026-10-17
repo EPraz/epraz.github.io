@@ -52,6 +52,7 @@
 .intro-location {
   margin-block-start: var(--site-space-3);
   color: var(--site-muted);
+  font-family: var(--site-font-mono);
   font-size: var(--site-type-small);
 }
 
@@ -59,7 +60,7 @@
   color: var(--site-text);
   font-family: var(--site-font-display);
   font-size: var(--site-type-statement);
-  line-height: 1.25;
+  line-height: var(--site-leading-statement);
 }
 
 .intro-description {

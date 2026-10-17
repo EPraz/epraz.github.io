@@ -24,6 +24,7 @@
   --site-type-statement: clamp(1.5rem, 2.8vw, 2.25rem);
   --site-leading-title: 1.04;
   --site-leading-body: 1.6;
+  --site-leading-statement: 1.25;
   --site-tracking-title: -0.045em;
   --site-tracking-label: 0.17em;
 
