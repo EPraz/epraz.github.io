@@ -65,7 +65,6 @@
   --site-profile-shadow: color-mix(in srgb, var(--site-bg) 80%, transparent);
   --site-ambient-warm: color-mix(in srgb, var(--site-accent) 14%, transparent);
   --site-ambient-cool: color-mix(in srgb, var(--site-link) 8%, transparent);
-  --site-ambient-dot: color-mix(in srgb, var(--site-link) 18%, transparent);
   --site-ease: cubic-bezier(0.2, 0, 0, 1);
 }
 

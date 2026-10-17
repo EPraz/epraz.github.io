@@ -1,22 +1,20 @@
 .intro {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse at 90% 15%, var(--site-ambient-warm), transparent 58%),
-    radial-gradient(ellipse at 10% 85%, var(--site-ambient-cool), transparent 65%),
-    var(--site-bg);
 }
 
 .intro::before {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   inset: 0;
+  /* Continue the entry backdrop behind the floating header and its margins. */
+  inset-block-start: calc(0px - var(--site-header-space));
   content: "";
   pointer-events: none;
-  background-image: radial-gradient(var(--site-ambient-dot) var(--site-rule), transparent var(--site-rule));
-  background-size: var(--site-space-7) var(--site-space-7);
-  mask-image: radial-gradient(ellipse at 70% 40%, black, transparent 75%);
+  background:
+    radial-gradient(ellipse at 90% 15%, var(--site-ambient-warm), transparent 58%),
+    radial-gradient(ellipse at 10% 85%, var(--site-ambient-cool), transparent 65%),
+    var(--site-bg);
 }
 
 @keyframes intro-profile-arrive {

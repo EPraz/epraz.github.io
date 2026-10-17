@@ -116,8 +116,15 @@
 
 @media (min-width: 64rem) {
   .site-header-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     gap: var(--site-space-4);
     padding-inline: var(--site-space-5);
+  }
+
+  .site-brand {
+    justify-self: start;
+    margin-inline-end: 0;
   }
 
   .site-navigation {
@@ -125,7 +132,6 @@
     display: block;
     padding: 0;
     border: 0;
-    margin-inline: auto;
     background: transparent;
   }
 
@@ -135,6 +141,7 @@
   }
 
   .site-resume {
+    justify-self: end;
     padding-inline: var(--site-space-5);
   }
 
