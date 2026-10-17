@@ -4,16 +4,14 @@ A single-page portfolio built with React 19, TypeScript, Vite 7 and Tailwind CSS
 Public content is in English. The site is published at https://epraz.github.io/
 through the repository's GitHub Pages workflow.
 
-The owner approved the Projects layout, project captures and concise Skills copy
-for publication. Future Dashboard/Coming soon changes will be reviewed locally
-before a separate deployment.
+The owner approved the compact Projects layout, project captures, concise Skills
+copy and Aster upcoming row for publication.
 
-The current local branch, `feat/project-rows-local`, keeps a compact Keelwatch
-flagship above horizontal supporting project rows. Rows stack on mobile.
+Projects keeps a compact Keelwatch flagship above horizontal supporting project
+rows. Rows stack on mobile.
 Aster, the current project in `GIT/dashboard`, has its own upcoming row with a
 source-backed sales/marketing description, a labelled preview placeholder and
-In development status. It has no public action or actual screenshot yet. This
-proposal is not part of the published three-project release at `bf40721`.
+In development status. It has no public action or actual screenshot yet.
 
 ## Run locally
 

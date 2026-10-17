@@ -56,7 +56,7 @@ export const upcomingProject = {
   title: "Aster",
   category: "Sales & marketing dashboard",
   summary:
-    "A frontend dashboard for a fictional audio store, bringing lead management, purchase tracking and product inventory into one workspace.",
+    "A frontend workspace for a fictional audio store, connecting leads, purchases and inventory.",
   stack: ["React Native Web", "Expo", "TypeScript"],
   status: "In development",
 };

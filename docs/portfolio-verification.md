@@ -249,3 +249,14 @@ graphic placeholder and In development status, with no link or inactive CTA.
 No dashboard files or operational data changed, and the unfinished app is not
 certified as complete. Types/lint/convention audit/build and eleven focused
 browser journeys pass. Evidence: `.design/aster-coming-soon/`. Local only.
+
+## Approved compact Projects release — 2026-10-17
+
+The owner accepted the Aster presentation and explicitly authorized publication
+of the current design. Its description is shortened to: "A frontend workspace
+for a fictional audio store, connecting leads, purchases and inventory."
+The compact flagship, horizontal supporting rows and Aster placeholder/status
+are included in this release. Aster has no public action or actual screenshot.
+The existing GitHub Pages workflow and contact configuration are retained.
+Post-deployment verification is recorded in the local publication evidence;
+contact checks are read-only and do not submit the form.
