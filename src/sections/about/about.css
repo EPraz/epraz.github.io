@@ -1,0 +1,29 @@
+#about {
+  border-block: var(--site-rule) solid var(--site-border);
+}
+
+.about-layout {
+  display: grid;
+  gap: var(--site-space-7);
+}
+
+.about-copy {
+  display: grid;
+  gap: var(--site-space-5);
+  color: var(--site-muted);
+  font-size: var(--site-type-lead);
+  line-height: var(--site-leading-body);
+}
+
+.about-interests {
+  margin-block-start: var(--site-space-3);
+  padding-inline-start: var(--site-space-5);
+  border-inline-start: var(--site-rule) solid var(--site-accent);
+}
+
+@media (min-width: 48rem) {
+  .about-layout {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: var(--site-space-9);
+  }
+}

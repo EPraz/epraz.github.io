@@ -5,6 +5,7 @@ import { SceneErrorFallback } from "./components/errors/ErrorFallbacks";
 import Experience from "./sections/experience/Experience";
 import Footer from "./sections/footer/Footer";
 import Hero from "./sections/hero/Hero";
+import About from "./sections/about/About";
 import Showcase from "./sections/showcase/Showcase";
 import TechStack from "./sections/techStack/TechStack";
 
@@ -22,6 +23,7 @@ const App = () => {
         <Showcase />
         <Experience />
         <TechStack />
+        <About />
         <section id="contact" tabIndex={-1} aria-label="Contact">
           <ErrorBoundary
             fallback={(fallbackProps) => (
