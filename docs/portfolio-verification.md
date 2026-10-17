@@ -4,7 +4,9 @@ Verified on 2026-10-17 on branch `feat/portfolio-entry-01`. The owner-review
 adjustments follow `6bfad50`: retain the static diagram, remove optional3D,
 extend the ambient background, add a desktop contact rail and replace the printed
 email with a descriptive action. Hero content and the sketch remain intact.
-The integrated page awaits the owner's final visual/editorial review.
+The owner accepted the design and authorized publication to the existing GitHub
+Pages repository on 2026-10-17. The publication refinement adds a portrait frame
+and a compact NAVIGATE frontend showcase beneath the Keelwatch flagship.
 
 ## Run and check
 
@@ -47,7 +49,7 @@ Results cover:
 - Twelve complete Chrome/Edge journeys at 320, 375, 768, 1024, 1440 and 1366×640;
   native navigation, keyboard focus, one page title, no horizontal overflow,
   no page errors and zero detected axe WCAG A/AA violations.
-- Keelwatch as the only featured project; its six destinations respond, and the
+- Keelwatch as the detailed flagship; its six destinations respond, and the
   walkthrough anchor exists. This does not certify the demo's write operations.
 - Current employment, education and languages; downloaded CV bytes match the
   supplied PDF. The source document is preserved.
@@ -101,4 +103,25 @@ them separately when transferring the local review workspace.
 
 Accessibility automation is not a full accessibility certification. Simulated
 contact success does not establish inbox delivery. Final editorial/visual
-acceptance belongs to the owner; publication is a separate decision.
+acceptance belongs to the owner.
+
+## Publication refinement
+
+The 2026-10-17 owner request authorizes updating the existing GitHub repository
+and its configured Pages site at https://epraz.github.io/. The old repository
+URL redirects to `EPraz/epraz.github.io`; `master` is the publication branch.
+Pages uses the existing Actions workflow, and the three EmailJS variable names
+are present in repository configuration. No configuration values are logged.
+
+NAVIGATE remains a private repository. Its historical Pages URL returned HTTP
+404, so the portfolio links to a local full-page screenshot instead of promising
+a live demo or linking inaccessible source. The real screenshot is resized and
+encoded as a 96 KB WebP. The copy describes responsive React UI, bilingual
+content, legal pages and client-side validation; it makes no backend or message
+delivery claim. No NAVIGATE source or repository visibility is changed.
+
+The publication QA artifacts live under `.design/portfolio-publication/` in the
+outer workspace. They cover the added preview link, image failure and retained
+layout, portrait frame and short-screen fit, plus the integrated keyboard and
+accessibility journeys. Public-site verification follows the Pages deployment;
+external email inbox delivery remains untested.

@@ -1,8 +1,8 @@
 # Edwin Pile — Software Engineer Portfolio
 
 A single-page portfolio built with React 19, TypeScript, Vite 7 and Tailwind CSS 4.
-Public content is in English. The current iteration is reviewed locally before
-any decision to publish it.
+Public content is in English. The site is published at https://epraz.github.io/
+through the repository's GitHub Pages workflow.
 
 ## Run locally
 
@@ -29,10 +29,12 @@ observations, recorded in the local reconstruction workspace.
 
 ## Page and content
 
-- **Home:** personal introduction, pencil sketch and native section links.
-- **Work:** Keelwatch is the only featured project. Its real local capture,
+- **Home:** personal introduction, framed pencil sketch and native section links.
+- **Work:** Keelwatch is the flagship. Its real local capture,
   case study, demo, code, walkthrough, transcript and Maintenance captures expose
-  the evidence and its synthetic-data/shared-account context.
+  the evidence and its synthetic-data/shared-account context. NAVIGATE complements
+  it with a shorter frontend landing-page showcase and full-page image preview.
+  Its source stays private; the unavailable historical demo is not linked.
 - **Experience:** two employment entries, education and languages aligned with
   the supplied CV. The downloadable PDF is an unchanged copy of that source.
 - **Skills:** evidence-backed capabilities and categorized tool chips. A static
@@ -41,7 +43,7 @@ observations, recorded in the local reconstruction workspace.
 - **Contact:** a descriptive email action, LinkedIn and GitHub, plus an EmailJS form with field
   validation, pending feedback, duplicate prevention and recoverable errors.
 
-Typed content lives in `src/contants/keelwatch.ts`, `professional.ts` and
+Typed content lives in `src/contants/keelwatch.ts`, `navigate.ts`, `professional.ts` and
 `contact.ts`. The existing `contants` spelling is intentional. `src/App.tsx`
 composes the sections. Shared CSS tokens live in `src/styles/tokens.css`, with
 section primitives in `src/styles/sections.css` and section-owned styles nearby.
@@ -90,9 +92,11 @@ Contact: [email](mailto:epilepra@gmail.com),
 
 The reconstruction spec, tickets and owner approvals remain Local Markdown under
 `.scratch/portfolio-reconstruction/`. Visual and QA artifacts are under `.design/`.
-These are local working artifacts, not new remote issues or a deployment. The
+These are local working artifacts, not new remote issues. The
 historical strategy documents in `docs/` describe earlier planning and do not
 override the current local specification and approved hero.
 
-See [local verification and limitations](docs/portfolio-verification.md) for the
-checks, reproduction commands and remaining owner-review boundary.
+See [verification and limitations](docs/portfolio-verification.md) for the
+checks and reproduction commands. Pushes to `master` or `main` run
+`.github/workflows/pages.yml`. The `github-pages` environment supplies the three
+public EmailJS identifiers listed above; never commit local environment files.

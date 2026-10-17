@@ -27,6 +27,10 @@
   aspect-ratio: 800 / 752;
   min-width: 0;
   margin: 0;
+  padding: var(--site-space-3);
+  border: var(--site-rule) solid var(--site-profile-border);
+  border-radius: var(--site-radius);
+  background: var(--site-surface);
 }
 
 .intro-portrait img {
