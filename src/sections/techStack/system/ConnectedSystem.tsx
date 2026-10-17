@@ -1,20 +1,16 @@
-import { lazy, Suspense, useCallback, useState } from "react";
-import { ErrorBoundary } from "../../../components/errors/ErrorBoundary";
+import { useCallback, useState } from "react";
+import ActiveSystemStage from "./ActiveSystemStage";
 import SystemDiagram from "./SystemDiagram";
 import { useAssemblyPreferences } from "./useAssemblyPreferences";
 import { useAssemblyVisibility } from "./useAssemblyVisibility";
 import "./connected-system.css";
 
-const AssemblyCanvas = lazy(() => import("./AssemblyCanvas"));
-
 const ConnectedSystem = () => {
   const permitted = useAssemblyPreferences();
   const { stageRef, visible } = useAssemblyVisibility();
   const [enabled, setEnabled] = useState(false);
-  const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
-  const onReady = useCallback(() => setReady(true), []);
-  const onUnavailable = useCallback(() => { setFailed(true); setReady(false); }, []);
+  const onUnavailable = useCallback(() => setFailed(true), []);
   const showScene = enabled && permitted && visible && !failed;
 
   return (
@@ -26,15 +22,8 @@ const ConnectedSystem = () => {
         <p className="system-note">A sketch of the responsibilities I bring together in full-stack work.</p>
       </figcaption>
       <div>
-        <div ref={stageRef} id="system-stage" className="system-stage" data-ready={showScene && ready}>
-          <SystemDiagram />
-          {showScene && (
-            <ErrorBoundary fallback={null} onError={onUnavailable}>
-              <Suspense fallback={<p role="status" className="system-feedback">Loading the 3D view…</p>}>
-                <AssemblyCanvas onReady={onReady} onUnavailable={onUnavailable} />
-              </Suspense>
-            </ErrorBoundary>
-          )}
+        <div ref={stageRef} id="system-stage" className="system-stage">
+          {showScene ? <ActiveSystemStage onUnavailable={onUnavailable} /> : <SystemDiagram />}
         </div>
         <ol className="system-legend" aria-label="Connected system responsibilities">
           <li><strong>Interface</strong><span>Clear workflows</span></li>
@@ -43,7 +32,7 @@ const ConnectedSystem = () => {
         </ol>
         <div className="system-controls">
           {permitted && !failed && (
-            <button type="button" className="site-button" aria-pressed={enabled} aria-controls="system-stage" onClick={() => { setEnabled((current) => !current); setReady(false); }}>
+            <button type="button" className="site-button" aria-pressed={enabled} aria-controls="system-stage" onClick={() => setEnabled((current) => !current)}>
               {enabled ? "Use static view" : "Play 3D assembly"}
             </button>
           )}

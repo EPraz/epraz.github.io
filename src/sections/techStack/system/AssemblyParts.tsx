@@ -23,12 +23,12 @@ const AssemblyParts = ({ colors, onReady, onUnavailable }: AssemblyPartsProps) =
     }
     current.frames += 1;
     if (delta > 0.04) current.slowFrames += 1;
-    if (current.frames <= 30 && current.slowFrames >= 12) {
+    if (delta > 0.25 || (current.frames <= 30 && current.slowFrames >= 12)) {
       current.failed = true;
       onUnavailable();
       return;
     }
-    current.progress = Math.min(1, current.progress + Math.min(delta, 0.05) / 1.2);
+    current.progress = Math.min(1, current.progress + delta / 1.2);
     const remaining = Math.pow(1 - current.progress, 3);
     for (let index = 0; index < parts.current.length; index += 1) {
       const part = parts.current[index];

@@ -10,14 +10,20 @@ extend({ AmbientLight, BoxGeometry, CylinderGeometry, DirectionalLight, Group, M
 type AssemblyCanvasProps = { onReady: () => void; onUnavailable: () => void };
 
 const AssemblyCanvas = ({ onReady, onUnavailable }: AssemblyCanvasProps) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+    const container = containerRef.current;
+    if (!container) return;
+    // Each effect owns its canvas, including StrictMode's setup/cleanup replay.
+    const canvas = document.createElement("canvas");
+    canvas.setAttribute("aria-hidden", "true");
+    container.appendChild(canvas);
     const root = createRoot(canvas);
     let active = true;
+    let configured = false;
     let state: RootState | undefined;
+    const dispose = () => { if (configured) root.unmount(); };
     const tokens = getComputedStyle(document.documentElement);
     const color = (name: string) => tokens.getPropertyValue(name).trim();
     const colors = { interface: color("--site-link"), api: color("--site-accent"), data: color("--site-muted"), connector: color("--site-border") };
@@ -34,7 +40,8 @@ const AssemblyCanvas = ({ onReady, onUnavailable }: AssemblyCanvasProps) => {
       camera: { position: [4.5, 3.5, 7], fov: 35 },
       gl: { powerPreference: "low-power", antialias: true },
     }).then(() => {
-      if (!active) { root.unmount(); return; }
+      configured = true;
+      if (!active) { dispose(); return; }
       state = root.render(
         <ErrorBoundary fallback={null} onError={onUnavailable}>
           <ambientLight intensity={1.5} />
@@ -44,17 +51,16 @@ const AssemblyCanvas = ({ onReady, onUnavailable }: AssemblyCanvasProps) => {
         </ErrorBoundary>,
       ).getState();
     }).catch(() => {
-      root.unmount();
+      configured = true;
+      dispose();
       if (active) onUnavailable();
     });
 
-    return () => { active = false; observer.disconnect(); root.unmount(); };
+    return () => { active = false; observer.disconnect(); canvas.remove(); dispose(); };
   }, [onReady, onUnavailable]);
 
   return (
-    <div className="system-canvas" role="img" aria-label="3D assembly of interface, API and data modules">
-      <canvas ref={canvasRef} aria-hidden="true" style={{ display: "block", width: "100%", height: "100%" }} />
-    </div>
+    <div ref={containerRef} className="system-canvas" role="img" aria-label="3D assembly of interface, API and data modules" />
   );
 };
 

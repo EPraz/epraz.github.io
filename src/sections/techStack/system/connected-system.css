@@ -35,13 +35,20 @@
   height: 100%;
 }
 
-.system-stage[data-ready="true"] > .system-diagram {
+.system-render[data-ready="true"] > .system-diagram {
   visibility: hidden;
 }
 
-.system-canvas {
+.system-canvas,
+.system-render {
   position: absolute;
   inset: 0;
+}
+
+.system-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .system-feedback {
