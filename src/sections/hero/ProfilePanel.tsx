@@ -4,6 +4,7 @@ import "./profile-panel.css";
 
 const profileFacts = [
   { label: "Based in", value: intro.location },
+  { label: "Focus", value: intro.focus },
   { label: "Working with", value: intro.tools },
 ];
 
@@ -12,6 +13,10 @@ const ProfilePanel = () => {
 
   return (
     <aside className="intro-profile" aria-label="Personal profile">
+      <div className="intro-profile-caption">
+        <span>Profile</span>
+        <span>{intro.name.first} {intro.name.last}</span>
+      </div>
       <div className="intro-profile-body">
         <figure className="intro-portrait">
           {portraitFailed ? (
