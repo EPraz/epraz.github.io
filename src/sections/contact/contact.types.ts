@@ -6,6 +6,8 @@ export type ContactFormValues = {
 
 export type ContactFieldName = keyof ContactFormValues;
 
+export type ContactErrors = Partial<Record<ContactFieldName, string>>;
+
 export type ContactFeedback = {
   type: "success" | "error";
   message: string;

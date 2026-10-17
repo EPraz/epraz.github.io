@@ -1,5 +1,5 @@
 import DOMPurify from "dompurify";
-import type { ContactFieldName, ContactFormValues } from "./contact.types";
+import type { ContactErrors, ContactFieldName, ContactFormValues } from "./contact.types";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -18,7 +18,10 @@ export const sanitizeContactText = (value: string) =>
     ALLOWED_ATTR: [],
   });
 
-export const isValidContactForm = (values: ContactFormValues) =>
-  values.name.trim().length > 0 &&
-  EMAIL_PATTERN.test(values.email.trim()) &&
-  values.message.trim().length > 0;
+export const getContactErrors = (values: ContactFormValues): ContactErrors => {
+  const errors: ContactErrors = {};
+  if (!values.name.trim()) errors.name = "Please enter your name.";
+  if (!EMAIL_PATTERN.test(values.email.trim())) errors.email = "Please enter a valid email address.";
+  if (!values.message.trim()) errors.message = "Please enter a message.";
+  return errors;
+};

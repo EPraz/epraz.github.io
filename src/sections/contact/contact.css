@@ -1,0 +1,117 @@
+.contact-layout {
+  display: grid;
+  gap: var(--site-space-8);
+}
+
+.contact-intro > p:not(.section-kicker) {
+  max-width: var(--site-reading-width);
+  margin-block: var(--site-space-5);
+  color: var(--site-muted);
+  font-size: var(--site-type-lead);
+  line-height: var(--site-leading-body);
+}
+
+.contact-address {
+  overflow-wrap: anywhere;
+  font-size: var(--site-type-brand);
+}
+
+.contact-form {
+  display: grid;
+  gap: var(--site-space-5);
+  min-width: 0;
+}
+
+.contact-field {
+  display: grid;
+  gap: var(--site-space-2);
+}
+
+.contact-field label {
+  color: var(--site-text);
+  font-size: var(--site-type-small);
+}
+
+.contact-field :is(input, textarea) {
+  width: 100%;
+  min-height: var(--site-touch-target);
+  margin: 0;
+  padding: var(--site-space-3);
+  border: var(--site-rule) solid var(--site-border);
+  border-radius: var(--site-radius);
+  background: var(--site-surface);
+  color: var(--site-text);
+  font: var(--site-type-body) var(--site-font-body);
+  line-height: var(--site-leading-body);
+}
+
+.contact-field textarea {
+  resize: vertical;
+}
+
+.contact-field [aria-invalid="true"] {
+  border-color: var(--site-accent);
+}
+
+.contact-field-error {
+  color: var(--site-accent);
+  font-size: var(--site-type-small);
+}
+
+.contact-feedback {
+  padding: var(--site-space-4);
+  border-inline-start: var(--site-focus-width) solid var(--site-link);
+  background: var(--site-surface);
+  color: var(--site-text);
+  line-height: var(--site-leading-body);
+}
+
+.contact-feedback[data-kind="error"] {
+  border-color: var(--site-accent);
+}
+
+.contact-form .site-button {
+  justify-self: start;
+}
+
+.contact-form .site-button:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.contact-help,
+.contact-unavailable {
+  color: var(--site-muted);
+  font-size: var(--site-type-small);
+  line-height: var(--site-leading-body);
+}
+
+.contact-honeypot {
+  display: none;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--site-space-5);
+  max-width: calc(var(--site-width) + var(--site-gutter) * 2);
+  margin-inline: auto;
+  padding: var(--site-space-6) var(--site-gutter);
+  border-block-start: var(--site-rule) solid var(--site-border);
+  color: var(--site-muted);
+  font-size: var(--site-type-small);
+}
+
+.site-footer a:focus-visible {
+  outline: var(--site-focus-width) solid var(--site-focus);
+  outline-offset: var(--site-space-1);
+}
+
+@media (min-width: 64rem) {
+  .contact-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--site-space-10);
+  }
+}

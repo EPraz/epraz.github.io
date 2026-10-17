@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import NavBar from "./components/NavBar";
 import { ErrorBoundary } from "./components/errors/ErrorBoundary";
-import { SceneErrorFallback } from "./components/errors/ErrorFallbacks";
+import ContactUnavailable from "./sections/contact/ContactUnavailable";
 import Experience from "./sections/experience/Experience";
 import Footer from "./sections/footer/Footer";
 import Hero from "./sections/hero/Hero";
@@ -26,12 +26,7 @@ const App = () => {
         <About />
         <section id="contact" tabIndex={-1} aria-label="Contact">
           <ErrorBoundary
-            fallback={(fallbackProps) => (
-              <SceneErrorFallback
-                {...fallbackProps}
-                label="The contact section"
-              />
-            )}
+            fallback={<ContactUnavailable />}
           >
             <Suspense
               fallback={
