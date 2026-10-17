@@ -7,8 +7,11 @@ export const keelwatch = {
   summary:
     "Operations teams need to keep vessel records, certificate risks, crew plans and maintenance changes connected. I built the React workflows, NestJS APIs and PostgreSQL rules, with server-enforced permissions and a shared change history.",
   stack: ["React", "TypeScript", "NestJS", "PostgreSQL", "Prisma"],
-  cover: "./images/keelwatch-maintenance-review.png",
+  cover: "./images/portfolio/keelwatch-fleet.webp",
   coverAlt:
+    "Keelwatch's Fleet register, showing synthetic vessels, registry numbers and statuses in the read-only live demo.",
+  conflictCover: "./images/keelwatch-maintenance-review.png",
+  conflictCoverAlt:
     "Keelwatch Maintenance rejects a stale save and compares the previous record, current values and the retained draft.",
   caseStudyUrl:
     "https://github.com/EPraz/keelwatch/blob/master/docs/flagship/CASE_STUDY.md",
@@ -24,6 +27,8 @@ export const keelwatch = {
   status: "live",
 } satisfies Project & {
   coverAlt: string;
+  conflictCover: string;
+  conflictCoverAlt: string;
   transcriptUrl: string;
   captureUrl: string;
   evidence: string;

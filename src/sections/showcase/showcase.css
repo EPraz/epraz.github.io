@@ -62,7 +62,7 @@
 .featured-image {
   display: grid;
   place-items: center;
-  aspect-ratio: 1440 / 1100;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   border: var(--site-rule) solid var(--site-border);
   border-radius: var(--site-radius);
@@ -91,6 +91,14 @@
 
 .featured-evidence {
   padding-block: var(--site-space-5);
+}
+
+.featured-conflict-capture {
+  max-width: var(--site-profile-tablet-width);
+}
+
+.featured-conflict-capture .featured-image {
+  aspect-ratio: 1440 / 1100;
 }
 
 .featured-details {

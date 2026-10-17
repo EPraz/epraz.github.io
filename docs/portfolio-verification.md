@@ -181,3 +181,15 @@ link targets, responsive columns/stacking, media-failure space reservation and
 the complete page's keyboard/accessibility journey. Evidence and screenshots
 are in the outer workspace's `.design/projects-section/`, with the scoped local
 spec at `.scratch/projects-section/spec.md`. No real email is sent during QA.
+
+The owner's next local refinement replaces the main Keelwatch warning image
+with its real Fleet register in the live read-only demo. Demo Auditor session
+and Fleet reads returned successfully; no operational data was changed. The
+capture uses the app's actual dark palette and is encoded as a 52 KB WebP.
+Explore demo is now primary; the case study and code remain secondary. The old
+local conflict capture and its direct evidence link are inside the disclosure,
+with a reserved image box and its own failure fallback. Supporting screenshots
+have a small shared inset for owner comparison; app colors remain unchanged.
+Skills and diagram prose are deliberately unchanged. Nine focused journeys,
+including failed main/conflict images, pass after this refinement. These are
+local design changes, not publication approval.
