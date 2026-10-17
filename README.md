@@ -4,6 +4,9 @@ A single-page portfolio built with React 19, TypeScript, Vite 7 and Tailwind CSS
 Public content is in English. The site is published at https://epraz.github.io/
 through the repository's GitHub Pages workflow.
 
+This branch contains a local Projects-section design proposal. It awaits owner
+approval; do not push or deploy the proposed layout before that approval.
+
 ## Run locally
 
 Use Node 20 or newer:
@@ -33,8 +36,12 @@ observations, recorded in the local reconstruction workspace.
 - **Work:** Keelwatch is the flagship. Its real local capture,
   case study, demo, code, walkthrough, transcript and Maintenance captures expose
   the evidence and its synthetic-data/shared-account context. NAVIGATE complements
-  it with a shorter frontend landing-page showcase and a live website at
-  https://navigate-marine.vercel.app/. Its source stays private.
+  its deeper explanation is available in a native disclosure. Project Management
+  and NAVIGATE form a pair of supporting project cards with live destinations.
+  Project Management uses a current cloud-demo taskboard capture and links its
+  public source; NAVIGATE opens https://navigate-marine.vercel.app/ and keeps its
+  source private. The Projects navigation label and View projects action retain
+  the existing `#work` anchor.
 - **Experience:** two employment entries, education and languages aligned with
   the supplied CV. The downloadable PDF is an unchanged copy of that source.
 - **Skills:** evidence-backed capabilities and categorized tool chips. A static
@@ -43,7 +50,7 @@ observations, recorded in the local reconstruction workspace.
 - **Contact:** a descriptive email action, LinkedIn and GitHub, plus an EmailJS form with field
   validation, pending feedback, duplicate prevention and recoverable errors.
 
-Typed content lives in `src/contants/keelwatch.ts`, `navigate.ts`, `professional.ts` and
+Typed content lives in `src/contants/keelwatch.ts`, `selectedProjects.ts`, `navigate.ts`, `professional.ts` and
 `contact.ts`. The existing `contants` spelling is intentional. `src/App.tsx`
 composes the sections. Shared CSS tokens live in `src/styles/tokens.css`, with
 section primitives in `src/styles/sections.css` and section-owned styles nearby.

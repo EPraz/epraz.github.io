@@ -4,7 +4,7 @@ export const navLinks = [
     link: "#hero",
   },
   {
-    name: "Work",
+    name: "Projects",
     link: "#work",
   },
   {

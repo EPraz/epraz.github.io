@@ -151,3 +151,31 @@ and local-only form. No actual messages are sent.
 Current correction evidence lives in the outer workspace's
 `.design/profile-restoration/` and `.design/navigate-live/`. Earlier publication
 notes above describe the superseded first candidate.
+
+## Local Projects-section proposal
+
+The owner's next request adds the newly hosted Project Management app and asks
+for a cohesive Projects section. This work is local-only on
+`feat/projects-section-local` and explicitly awaits visual approval before any
+push or deployment. The public portfolio remains on the previous approved code.
+
+The proposal adds a Projects heading, a framed Keelwatch flagship and two
+supporting cards for Project Management and NAVIGATE. A native disclosure keeps
+Keelwatch's detailed conflict example and recording/transcript links reachable.
+Projects navigation and the hero's View projects action retain `#work`. Existing
+hero styling, contact behavior and credentials are preserved.
+
+Project Management's https://project-management-murex-pi.vercel.app/ access was
+verified through Explore demo, the populated project list and taskboard; only
+demo authentication and reading/navigation were performed. No application records
+were created, moved or edited. The thumbnail is a real current screenshot. The
+card mentions fictional shared data and possible first-load wait. Its repository
+is public. NAVIGATE continues linking its live Vercel site and private source is
+not linked. No unrelated archived project is mounted.
+
+Local types, lint, convention audit and production build pass. Browser checks
+cover the three-project collection, native disclosure keyboard behavior, real
+link targets, responsive columns/stacking, media-failure space reservation and
+the complete page's keyboard/accessibility journey. Evidence and screenshots
+are in the outer workspace's `.design/projects-section/`, with the scoped local
+spec at `.scratch/projects-section/spec.md`. No real email is sent during QA.

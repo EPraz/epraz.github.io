@@ -1,3 +1,23 @@
+.projects-heading {
+  display: grid;
+  gap: var(--site-space-5);
+  margin-block-end: var(--site-space-7);
+}
+
+.projects-heading > p {
+  max-width: var(--site-reading-width);
+  color: var(--site-muted);
+  font-size: var(--site-type-lead);
+  line-height: var(--site-leading-body);
+}
+
+.featured-work {
+  padding: var(--site-space-4);
+  border: var(--site-rule) solid var(--site-profile-border);
+  border-radius: var(--site-radius);
+  background: var(--site-project-surface);
+}
+
 .featured-overview,
 .featured-evidence {
   display: grid;
@@ -7,7 +27,7 @@
 .featured-story {
   display: grid;
   align-content: start;
-  gap: var(--site-space-5);
+  gap: var(--site-space-4);
 }
 
 .featured-story > p,
@@ -19,6 +39,15 @@
 .featured-story .featured-subtitle {
   color: var(--site-text);
   font-size: var(--site-type-lead);
+}
+
+.featured-story .section-kicker {
+  margin: 0;
+  color: var(--site-accent);
+}
+
+.featured-story > h3 {
+  font-size: var(--site-type-statement);
 }
 
 .featured-role {
@@ -61,12 +90,28 @@
 }
 
 .featured-evidence {
-  margin-block-start: var(--site-space-8);
-  padding-block: var(--site-space-7);
-  border-block: var(--site-rule) solid var(--site-border);
+  padding-block: var(--site-space-5);
 }
 
-.featured-evidence h3 {
+.featured-details {
+  margin-block-start: var(--site-space-6);
+  padding-block-start: var(--site-space-3);
+  border-block-start: var(--site-rule) solid var(--site-border);
+}
+
+.featured-details summary {
+  min-height: var(--site-touch-target);
+  padding-block: var(--site-space-3);
+  color: var(--site-link);
+  line-height: var(--site-leading-body);
+  cursor: pointer;
+}
+
+.featured-details summary::marker {
+  color: var(--site-accent);
+}
+
+.featured-evidence h4 {
   margin-block-end: var(--site-space-4);
   font-family: var(--site-font-display);
   font-size: var(--site-type-statement);
@@ -89,7 +134,7 @@
   font-family: var(--site-font-mono);
 }
 
-.evidence-steps h4 {
+.evidence-steps h5 {
   margin-block-end: var(--site-space-2);
   font-weight: 500;
 }
@@ -101,6 +146,17 @@
   color: var(--site-muted);
   font-size: var(--site-type-small);
   line-height: var(--site-leading-body);
+}
+
+@media (min-width: 48rem) {
+  .projects-heading {
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: end;
+  }
+
+  .featured-work {
+    padding: var(--site-space-6);
+  }
 }
 
 @media (min-width: 64rem) {

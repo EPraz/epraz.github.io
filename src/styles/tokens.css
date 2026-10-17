@@ -64,6 +64,7 @@
   --site-profile-bg: color-mix(in srgb, var(--site-surface) 55%, var(--site-bg));
   --site-profile-border: color-mix(in srgb, var(--site-link) 25%, var(--site-border));
   --site-profile-shadow: color-mix(in srgb, var(--site-bg) 80%, transparent);
+  --site-project-surface: color-mix(in srgb, var(--site-surface) 35%, var(--site-bg));
   --site-ambient-warm: color-mix(in srgb, var(--site-accent) 14%, transparent);
   --site-ambient-cool: color-mix(in srgb, var(--site-link) 8%, transparent);
   --site-ambient-dot: color-mix(in srgb, var(--site-link) 32%, transparent);
