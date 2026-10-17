@@ -4,7 +4,6 @@ export const intro = {
   role: "Software engineer",
   description:
     "I build interfaces, APIs and data models that work together. I enjoy tracking down tricky issues and bringing a design to life, down to the details.",
-  focus: "Interfaces, APIs & data",
   tools: "React · TypeScript · C#/.NET",
   location: "Colorado Springs, CO, USA",
   primaryAction: { label: "View Keelwatch", href: "#work" },
