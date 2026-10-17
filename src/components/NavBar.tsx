@@ -41,7 +41,11 @@ const NavBar = ({
           </ul>
         </nav>
 
-        <a href="/cv/CV_Edwin_Pile.pdf" download className="contact-btn group">
+        <a
+          href="./cv/CV_Edwin_Pile.pdf"
+          download
+          className="contact-btn group"
+        >
           <div className="inner">
             <span>Download CV</span>
           </div>

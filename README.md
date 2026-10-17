@@ -1,9 +1,23 @@
-# Edwin Pile — Full-Stack (Web & Mobile) Portfolio
+# Edwin Pile — Software Engineer Portfolio
 
-Production-minded engineer focused on scalable web & mobile apps, clean architecture, and measurable results. I build with **React / React Native / .NET / Node.js**, deploy to cloud, and ship fast.
+I build reliable operational software—from clear interfaces and APIs to data
+models, authorization, and production delivery. My primary tools include
+**React, React Native, TypeScript, NestJS, C#/.NET, and PostgreSQL**.
 
-**Live:** _coming soon_  
+**Live:** _coming soon_
+
 **Contact:** epilepra@gmail.com · [LinkedIn](https://www.linkedin.com/in/edwin-pile-583652234/) · [GitHub](https://github.com/EPraz)
+
+---
+
+## Portfolio Strategy
+
+The next portfolio iteration is guided by:
+
+- [`docs/portfolio-strategy.md`](docs/portfolio-strategy.md) — positioning,
+  flagship scope, evidence standards, and engineering guardrails.
+- [`docs/maritime-operations-roadmap.md`](docs/maritime-operations-roadmap.md) —
+  phased, verifiable execution checklist.
 
 ---
 
@@ -29,19 +43,28 @@ Production-minded engineer focused on scalable web & mobile apps, clean architec
 
 ## Projects (Selection)
 
-> All cards are driven from a single data source and rendered in a uniform grid with status badges and CTAs.
+- **Keelwatch — featured project:** an independent maritime operations workspace
+  connecting Fleet, Compliance, Crew, Maintenance and Activity. My contribution
+  spans React workflows, NestJS APIs, PostgreSQL rules, permissions and history.
+  [Case study](https://github.com/EPraz/keelwatch/blob/master/docs/flagship/CASE_STUDY.md) ·
+  [Demo](https://keelwatch-chi.vercel.app/sign-in) ·
+  [Code and recordings](https://github.com/EPraz/keelwatch) ·
+  [Integration verification](docs/keelwatch-integration.md)
+
+> Keelwatch leads Work as a featured card. Other projects retain the existing
+> grid with status badges and CTAs; typed constants supply the project content.
+
+- **Project Management App** — Full-stack agile platform (Azure DevOps–inspired)
+  Stack: React · NestJS · Prisma · PostgreSQL · Supabase Auth · WebSockets · Docker · Charts.js
+  _Status: Demo offline_ · [Repo](https://github.com/EPraz/projectManagement)
 
 - **Logistics Dashboard** — Cross-platform operations dashboard  
   Stack: React Native · Expo · Expo Router · TypeScript · NativeWind · Victory Native · React Native Web  
   _Status: Live_ · [Repo](https://github.com/EPraz/dashboard) · [Live](https://dashboard-one-rose-14.vercel.app/dashboard/)
 
-- **Project Management App** — Full-stack agile platform (Azure DevOps–inspired)  
-  Stack: React · NestJS · Prisma · PostgreSQL · Supabase Auth · WebSockets · Docker · Charts.js  
-  _Status: Live_ · [Repo](https://github.com/EPraz/projectManagement) · [Live](https://projectmanagement.fly.dev)
-
 - **Navigate** — i18n routing & validated forms (SPA)  
   Stack: React · TypeScript · Vite · React Router · Tailwind CSS · Material Tailwind · i18next · React Hook Form · Yup · Vitest  
-  _Status: Live_ · [Live](https://epraz.github.io/navigate/)
+  _Status: Demo offline_
 
 - **Restaurant Landing Page** — Responsive marketing site  
   Stack: React (Create React App)  
@@ -50,8 +73,6 @@ Production-minded engineer focused on scalable web & mobile apps, clean architec
 - **Camera Viewer App (RN)** — Multi-camera monitoring UI prototype  
   Stack: React Native · Expo · TypeScript  
   _Status: Live (Prototype)_ · [Repo](https://github.com/EPraz/camera-ui-mvp) · [Live](https://camera-ui-mvp.vercel.app/)
-
-> Additional React Native products (multi-tenant e-commerce admin, marketplace, offline-first systems) are under active development and will be published as they reach production readiness.
 
 <!-- - **Project Management App** — Full-stack agile platform (Azure DevOps–inspired)
   Stack: React · NestJS · Prisma · PostgreSQL · Supabase Auth
@@ -86,6 +107,7 @@ This portfolio is built as a production-style application, not a static showcase
 - **Content-driven UI:** Cards/sections render from typed constants for easy updates.  
   Update these to maintain the site without touching components:
   - `contants/projects.ts` — project cards (title, stack, links, status)
+  - `contants/keelwatch.ts` — featured Keelwatch summary, evidence and links
   - `contants/index.ts` — `heroWords`, `abilities`, `techStackImgs`, `counterItems`, `socialImgs`, `expCards`
 
 - **Uniform project grid:** Same-sized cards, fixed media aspect ratio, clamped text, consistent CTAs (Live/Repo/Demo).

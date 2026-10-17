@@ -25,3 +25,6 @@ dist-ssr
 .env
 .codex
 *AGENTS*
+
+# Local-only issue tracker and specs
+/.scratch/

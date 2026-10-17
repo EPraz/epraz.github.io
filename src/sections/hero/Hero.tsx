@@ -7,7 +7,7 @@ const Hero = () => {
       {/* FONDO: detrás y sin eventos */}
       <div className="absolute inset-0 -z-10 pointer-events-none select-none">
         <img
-          src="/images/bg.png"
+          src="./images/bg.png"
           alt=""
           className="w-full h-full object-cover"
           draggable={false}
@@ -22,7 +22,7 @@ const Hero = () => {
           <div className="hero-visual-card">
             <div className="hero-visual-frame">
               <img
-                src="/images/captura_dashboard.png"
+                src="./images/captura_dashboard.png"
                 alt="Dashboard preview"
                 className="hero-visual-img"
                 draggable={false}

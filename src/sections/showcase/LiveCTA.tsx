@@ -14,9 +14,13 @@ const LiveCTA = ({ status, url, id, size = "md" }: LiveCTAProps) => (
     id={id}
     size={size}
     activeClassName="btn-primary-live select-none"
-    disabledTitle="Live demo unavailable"
+    disabledTitle={
+      status === "demo-offline"
+        ? "Live demo temporarily offline"
+        : "Live demo unavailable"
+    }
   >
-    Live
+    {status === "demo-offline" ? "Offline" : "Live"}
   </ProjectAction>
 );
 

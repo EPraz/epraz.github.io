@@ -13,8 +13,8 @@ export const expCards: ExpCardsProps[] = [
   {
     review:
       "Technical ownership across .NET APIs and microservices — improved modularity, quality, and on-time delivery.",
-    imgPath: "/images/logos/controlrisks.png",
-    logoPath: "/images/logos/controlrisks.png",
+    imgPath: "./images/logos/controlrisks.png",
+    logoPath: "./images/logos/controlrisks.png",
     title: "Software Engineer — Control Risks",
     date: "Mar 2023 – Present",
     responsibilities: [
@@ -31,8 +31,8 @@ export const expCards: ExpCardsProps[] = [
   {
     review:
       "Faster, more stable sites through performance audits, optimizations, and security best practices.",
-    imgPath: "/images/logos/lios.jpg",
-    logoPath: "/images/logos/lios.jpg",
+    imgPath: "./images/logos/lios.jpg",
+    logoPath: "./images/logos/lios.jpg",
     title: "Web Specialist — Live And Invest Overseas",
     date: "Sep 2020 – Oct 2022",
     responsibilities: [
@@ -44,13 +44,13 @@ export const expCards: ExpCardsProps[] = [
   {
     review:
       "Full-stack projects for continuous learning and portfolio work, modeled after enterprise standards.",
-    imgPath: "/images/logos/self-taugh.jpg",
-    logoPath: "/images/logos/self-taugh.jpg",
+    imgPath: "./images/logos/self-taugh.jpg",
+    logoPath: "./images/logos/self-taugh.jpg",
     title: "Self-Taught Web Developer — Personal Projects",
     date: "Apr 2020 – Present",
     responsibilities: [
-      "•	Designed and built full-stack applications using React, React Native, Node.js, to demonstrate proficiency in modern web development.",
-      "•	Explored and applied design patterns, unit testing frameworks, and CI/CD pipelines to personal projects to mirror enterprise development standards.",
+      "Designed and built full-stack applications using React, React Native, and Node.js to deepen practical experience with modern product development.",
+      "Applied design patterns, automated testing, and CI/CD practices to personal projects with documented engineering constraints.",
     ],
   },
 ];

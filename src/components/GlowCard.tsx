@@ -1,11 +1,10 @@
 import { useRef, type ReactNode } from "react";
-import type { ExpCardsProps, TestimonialProps } from "../contants";
 
 interface Props {
   children: ReactNode;
-  card: ExpCardsProps | TestimonialProps;
+  review: string;
 }
-const GlowCard = ({ card, children }: Props) => {
+const GlowCard = ({ review, children }: Props) => {
   const cardRef = useRef<HTMLDivElement | null>(null);
 
   const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -31,7 +30,7 @@ const GlowCard = ({ card, children }: Props) => {
       <div className="flex items-center gap-1 mb-5 ">
         {Array.from({ length: 5 }, (_, i) => (
           <img
-            src="/images/star.png"
+            src="./images/star.png"
             key={i}
             alt=""
             aria-hidden="true"
@@ -40,7 +39,7 @@ const GlowCard = ({ card, children }: Props) => {
         ))}
       </div>
       <div className="mb-5">
-        <p className="text-white-50 text-lg">{card.review}</p>
+        <p className="text-white-50 text-lg">{review}</p>
       </div>
       {children}
     </div>

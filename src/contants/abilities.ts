@@ -1,18 +1,18 @@
 // constants
 export const abilities = [
   {
-    imgPath: "/images/logos/react-native.png",
-    title: "Scalable Web & Mobile",
-    desc: "React, React Native, .NET & Node.js to ship fast, reliable apps users love.",
+    imgPath: "./images/logos/react-native.png",
+    title: "Operational Interfaces",
+    desc: "Accessible React and React Native experiences for data-heavy workflows across web and mobile.",
   },
   {
-    imgPath: "/images/logos/azure-logo.png",
-    title: "Robust APIs & Cloud",
-    desc: "REST/GraphQL, SQL Server/No SQL Servevr, and Azure (Functions, Web Apps) with a focus on performance and security.",
+    imgPath: "./images/logos/azure-logo.png",
+    title: "APIs & Data Integrity",
+    desc: ".NET, Node.js, SQL, and NoSQL systems with explicit authorization, validation, and failure handling.",
   },
   {
-    imgPath: "/images/time.png",
-    title: "Quality & On-Time Delivery",
-    desc: "Clean architecture, tests (xUnit/Jest), and CI/CD to hit deadlines without surprises.",
+    imgPath: "./images/time.png",
+    title: "Evidence-Led Delivery",
+    desc: "Clean architecture, focused tests, CI/CD, and measurable performance from implementation through release.",
   },
 ];

@@ -10,9 +10,9 @@ import { BlendFunction } from "postprocessing";
 import * as THREE from "three";
 
 export default function OptimizedRoom(props) {
-  const { nodes, materials } = useGLTF("/models/optimized-room.glb");
+  const { nodes, materials } = useGLTF("./models/optimized-room.glb");
   const screensRef = useRef();
-  const matcapTexture = useTexture("/images/textures/mat1.png");
+  const matcapTexture = useTexture("./images/textures/mat1.png");
 
   const customMaterials = useMemo(
     () => ({
@@ -178,4 +178,4 @@ export default function OptimizedRoom(props) {
   );
 }
 
-useGLTF.preload("/models/optimized-room.glb");
+useGLTF.preload("./models/optimized-room.glb");

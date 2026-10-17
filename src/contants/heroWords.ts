@@ -1,10 +1,10 @@
 export const heroWords = [
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
-  { text: "Ideas", imgPath: "/images/ideas.svg" },
-  { text: "Concepts", imgPath: "/images/concepts.svg" },
-  { text: "Designs", imgPath: "/images/designs.svg" },
-  { text: "Code", imgPath: "/images/code.svg" },
+  { text: "Interfaces", imgPath: "./images/designs.svg" },
+  { text: "APIs", imgPath: "./images/code.svg" },
+  { text: "Data", imgPath: "./images/concepts.svg" },
+  { text: "Systems", imgPath: "./images/ideas.svg" },
+  { text: "Interfaces", imgPath: "./images/designs.svg" },
+  { text: "APIs", imgPath: "./images/code.svg" },
+  { text: "Data", imgPath: "./images/concepts.svg" },
+  { text: "Systems", imgPath: "./images/ideas.svg" },
 ];

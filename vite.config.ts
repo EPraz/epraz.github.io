@@ -9,6 +9,7 @@ const isWebGLDependency = (moduleId: string) =>
   moduleId.includes("/maath/");
 
 export default defineConfig({
+  base: "./",
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {

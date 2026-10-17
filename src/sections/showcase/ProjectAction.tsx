@@ -13,7 +13,7 @@ type ProjectActionProps = {
 
 const sizeClassNames: Record<ProjectActionSize, string> = {
   sm: "h-9 px-3 text-sm",
-  md: "h-10 px-4",
+  md: "min-h-11 px-4",
 };
 
 const ProjectAction = ({
@@ -33,7 +33,7 @@ const ProjectAction = ({
         href={href}
         target="_blank"
         rel="noreferrer noopener"
-        className={`${sharedClassName} cursor-pointer border-white/15 text-white/90 hover:bg-white/5 ${activeClassName}`}
+        className={`${sharedClassName} cursor-pointer border-white/15 text-white/90 hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none ${activeClassName}`}
       >
         {children}
       </a>

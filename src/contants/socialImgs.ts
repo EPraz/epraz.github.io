@@ -8,11 +8,11 @@ export const socialImgs: SocialImgsProps[] = [
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/edwin-pile-583652234/",
-    imgPath: "/images/linkedin.png",
+    imgPath: "./images/linkedin.png",
   },
   {
     name: "GitHub",
     url: "https://github.com/EPraz",
-    imgPath: "/images/logos/github.JPG",
+    imgPath: "./images/logos/github.JPG",
   },
 ];

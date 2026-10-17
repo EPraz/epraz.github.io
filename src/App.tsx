@@ -10,7 +10,6 @@ import {
   Logo,
   Showcase,
   TechStack,
-  // Testimonials,
 } from "./sections";
 
 const Contact = lazy(() => import("./sections/contact/Contact"));
@@ -26,7 +25,6 @@ const App = () => {
         <FeatureCards />
         <Experience />
         <TechStack />
-        {/* <Testimonials /> */}
         <ErrorBoundary
           fallback={(fallbackProps) => (
             <SceneErrorFallback

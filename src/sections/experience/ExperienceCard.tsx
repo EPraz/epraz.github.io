@@ -9,7 +9,7 @@ type ExperienceCardProps = {
 const ExperienceCard = ({ experience }: ExperienceCardProps) => (
   <article className="exp-card-wrapper">
     <div className="xl:w-2/6">
-      <GlowCard card={experience}>
+      <GlowCard review={experience.review}>
         <div className="flex h-full w-full items-center justify-center">
           <img
             src={experience.imgPath}

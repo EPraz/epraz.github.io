@@ -87,7 +87,7 @@ const ContactForm = () => {
             {isSubmitting ? "Sending..." : "Send Message"}
           </span>
           <span className="arrow-wrapper">
-            <img src="/images/arrow-down.svg" alt="" aria-hidden="true" />
+            <img src="./images/arrow-down.svg" alt="" aria-hidden="true" />
           </span>
         </span>
       </button>
