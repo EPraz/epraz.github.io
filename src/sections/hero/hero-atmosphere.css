@@ -22,10 +22,9 @@
 }
 
 .intro::after {
-  background: linear-gradient(125deg, var(--site-texture-cool), var(--site-texture-warm));
-  mask-image: url("/images/portfolio/etch-marks.svg");
-  mask-size: var(--site-texture-tile) auto;
-  mask-repeat: repeat;
+  background-image: radial-gradient(var(--site-ambient-dot) var(--site-rule), transparent var(--site-rule));
+  background-size: var(--site-space-7) var(--site-space-7);
+  mask-image: radial-gradient(ellipse at 70% 40%, black, transparent 75%);
 }
 
 @keyframes intro-profile-arrive {
