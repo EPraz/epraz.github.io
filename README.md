@@ -90,3 +90,6 @@ The reconstruction spec, tickets and owner approvals remain Local Markdown under
 These are local working artifacts, not new remote issues or a deployment. The
 historical strategy documents in `docs/` describe earlier planning and do not
 override the current local specification and approved hero.
+
+See [local verification and limitations](docs/portfolio-verification.md) for the
+checks, reproduction commands and remaining owner-review boundary.
