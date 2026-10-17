@@ -19,6 +19,9 @@
   --site-type-lead: 1.125rem;
   --site-type-brand: 1.5rem;
   --site-type-title: clamp(3.25rem, 6.4vw, 5.75rem);
+  --site-type-name: clamp(3.25rem, 12vw, 8rem);
+  --site-type-role: clamp(1.375rem, 2.8vw, 2rem);
+  --site-type-statement: clamp(1.5rem, 2.8vw, 2.25rem);
   --site-leading-title: 1.04;
   --site-leading-body: 1.6;
   --site-tracking-title: -0.045em;

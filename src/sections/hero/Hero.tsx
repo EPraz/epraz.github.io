@@ -1,5 +1,4 @@
 import HeroTextContent from "./HeroTextContent";
-import StaticAssembly from "./StaticAssembly";
 import "./hero.css";
 
 const Hero = () => {
@@ -10,10 +9,7 @@ const Hero = () => {
       className="intro"
       aria-labelledby="intro-title"
     >
-      <div className="intro-layout">
-        <HeroTextContent />
-        <StaticAssembly />
-      </div>
+      <HeroTextContent />
     </section>
   );
 };

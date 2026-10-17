@@ -115,9 +115,10 @@ This portfolio is built as a production-style application, not a static showcase
 - **Animations (GSAP):** Batched `ScrollTrigger` for minimal observers; respects `prefers-reduced-motion`; one-time entrance animations.
 
 - **Static entry:** the introduction and navigation work independently of WebGL.
-  A compressed connected-piece illustration reserves its layout and has a
-  CSS fallback; fonts are served locally. Stars and the contact globe remain
-  unmounted while the new single-scene direction is reviewed.
+  Edwin's name, engineering role and first-person profile lead the introduction;
+  fonts are served locally. The connected-piece concept is retained in local
+  history for reuse. Stars and the contact globe remain unmounted while the
+  place and meaning of a future 3D piece are reviewed.
 
 - **Accessibility & UX:** Keyboard-focusable cards/links, alt text for icons/logos, consistent hit targets, high-contrast badges.
 
