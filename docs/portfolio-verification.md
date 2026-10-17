@@ -204,3 +204,9 @@ Repeated introductory/diagram paragraphs and their unused text styles were
 removed. Before/after responsive captures remain in `.design/projects-section/`.
 Types, lint, build and nine focused browser journeys pass. Publication still
 awaits owner approval.
+
+The owner subsequently approved the complete current design and explicitly
+authorized publication to the existing GitHub Pages site. The next Dashboard
+card and four-project layout are future local work and are excluded from this
+release. Use the existing Pages workflow and preserve its working contact
+configuration. Public verification evidence is recorded locally after deployment.

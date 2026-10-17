@@ -4,8 +4,9 @@ A single-page portfolio built with React 19, TypeScript, Vite 7 and Tailwind CSS
 Public content is in English. The site is published at https://epraz.github.io/
 through the repository's GitHub Pages workflow.
 
-This branch contains a local Projects-section design proposal. It awaits owner
-approval; do not push or deploy the proposed layout before that approval.
+The owner approved the Projects layout, project captures and concise Skills copy
+for publication. Future Dashboard/Coming soon changes will be reviewed locally
+before a separate deployment.
 
 ## Run locally
 
