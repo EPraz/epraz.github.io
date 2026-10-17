@@ -77,6 +77,14 @@
   font-size: var(--site-type-small);
 }
 
+.upcoming-project {
+  border-style: dashed;
+}
+
+.upcoming-project .supporting-project-body {
+  justify-content: center;
+}
+
 @media (min-width: 48rem) {
   .supporting-project-media {
     padding: var(--site-space-4);
@@ -88,5 +96,23 @@
 
   .supporting-project-note {
     min-block-size: calc(var(--site-type-small) * var(--site-leading-body) * 3 + var(--site-space-3) + var(--site-rule));
+  }
+
+  .upcoming-project {
+    grid-column: 1 / -1;
+  }
+
+  .upcoming-project .supporting-project-note {
+    min-block-size: 0;
+  }
+}
+
+@media (min-width: 80rem) {
+  .supporting-projects {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .upcoming-project {
+    grid-column: auto;
   }
 }

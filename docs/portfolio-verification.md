@@ -210,3 +210,20 @@ authorized publication to the existing GitHub Pages site. The next Dashboard
 card and four-project layout are future local work and are excluded from this
 release. Use the existing Pages workflow and preserve its working contact
 configuration. Public verification evidence is recorded locally after deployment.
+
+## Published Projects and local Dashboard preparation
+
+The accepted three-project design is published at `bf40721`. GitHub Pages run
+39074098115 completed successfully. Three public journeys (375, 768 and 1280 px)
+verify native keyboard navigation, Fleet/taskboard captures, concise Skills, exact
+CV bytes, zero detected axe violations and no failed site resources/page errors.
+The EmailJS configuration matches the current local public identifiers by a
+read-only comparison of loaded JavaScript chunks. The form was not submitted.
+
+The next local branch adds a text-only Dashboard placeholder and a responsive
+three-card supporting grid. Dashboard is unfinished in `GIT/dashboard`; no
+screenshots, description, technologies or links are inferred. Seven responsive
+journeys, including the 1279/1280 breakpoint boundary, and four image-failure
+journeys pass. Types, lint, strict convention audit and build pass. This fourth
+project proposal stays local until separate approval. Evidence is in the outer
+workspace at `.design/dashboard-placeholder/`.

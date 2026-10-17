@@ -1,5 +1,6 @@
 import FeaturedProject from "./FeaturedProject";
 import SupportingProject from "./SupportingProject";
+import UpcomingProject from "./UpcomingProject";
 import { supportingProjects } from "../../contants/selectedProjects";
 import "./showcase.css";
 
@@ -15,6 +16,7 @@ const Showcase = () => (
     <FeaturedProject />
     <div className="supporting-projects">
       {supportingProjects.map((project) => <SupportingProject key={project.id} project={project} />)}
+      <UpcomingProject />
     </div>
   </section>
 );

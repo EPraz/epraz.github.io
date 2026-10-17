@@ -8,6 +8,13 @@ The owner approved the Projects layout, project captures and concise Skills copy
 for publication. Future Dashboard/Coming soon changes will be reviewed locally
 before a separate deployment.
 
+The current local branch, `feat/dashboard-placeholder-local`, reserves a fourth
+project as Dashboard / Coming soon / In development. It has no photo, product
+description or action yet. Keelwatch stays featured; the supporting grid uses
+three desktop columns, two tablet columns plus a full-width upcoming row, and a
+single mobile column. This proposal is not part of the published three-project
+release at `bf40721`.
+
 ## Run locally
 
 Use Node 20 or newer:
