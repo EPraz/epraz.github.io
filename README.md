@@ -35,10 +35,10 @@ observations, recorded in the local reconstruction workspace.
   the evidence and its synthetic-data/shared-account context.
 - **Experience:** two employment entries, education and languages aligned with
   the supplied CV. The downloadable PDF is an unchanged copy of that source.
-- **Skills:** evidence-backed capabilities and categorized tool chips. An optional
-  connected-system assembly illustrates interface, API and data responsibilities.
+- **Skills:** evidence-backed capabilities and categorized tool chips. A static
+  connected-system diagram illustrates interface, API and data responsibilities.
 - **About:** development, debugging, careful frontend work, reading and exercise.
-- **Contact:** direct email, LinkedIn and GitHub, plus an EmailJS form with field
+- **Contact:** a descriptive email action, LinkedIn and GitHub, plus an EmailJS form with field
   validation, pending feedback, duplicate prevention and recoverable errors.
 
 Typed content lives in `src/contants/keelwatch.ts`, `professional.ts` and
@@ -48,16 +48,18 @@ section primitives in `src/styles/sections.css` and section-owned styles nearby.
 Older project/scene sources remain outside the mounted page; they are not
 presented as completed work.
 
-## Optional 3D
+## Visual system
 
-The static diagram is the default. Only the visitor's **Play 3D assembly** action
-loads the graphics module. Text, links and contact never require WebGL. The
-scene uses procedural geometry, one context, DPR capped at 1.25 and a bounded
-assembly followed by demand-driven idle rendering. It unmounts outside the
-viewport or while the document is hidden. Reduced motion, data saving, constrained
-hardware/battery, failed loading, unavailable WebGL, context loss or sustained
-slow frames retain the static diagram. No stars, globe, model or texture downloads
-are part of this journey.
+The ink-blue/copper background and dot texture continue through the page, with
+quieter texture behind reading sections. A fixed right-side contact rail appears
+on wide desktop with reserved layout space. Smaller screens retain the contact
+and footer links. Icons have accessible names, focus indicators and hover/focus
+labels that can be dismissed with Escape.
+
+The owner selected the static system diagram over the optional assembly. The
+page has no 3D controls or WebGL dependency downloads. Earlier scene code remains
+in Git history. The contact section displays “Send an email” instead of printing
+the address; its real mailto destination and native browser behavior remain.
 
 ## Contact configuration
 

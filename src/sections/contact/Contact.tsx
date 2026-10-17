@@ -8,7 +8,7 @@ const Contact = () => (
       <p className="section-kicker">Contact</p>
       <h2 className="section-title">Let’s build something thoughtful.</h2>
       <p>Have a project, a software engineering role or an interesting problem in mind? I’d like to hear about it.</p>
-      <a className="site-link contact-address" href={contactLinks.mailto}>{contactLinks.email}</a>
+      <a className="site-button contact-email" href={contactLinks.mailto}>Send an email <span aria-hidden="true">↗</span></a>
       <div className="section-actions">
         <a className="site-link" href={contactLinks.linkedIn} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         <a className="site-link" href={contactLinks.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>

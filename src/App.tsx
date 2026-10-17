@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react";
 import NavBar from "./components/NavBar";
+import ContactRail from "./components/ContactRail";
 import { ErrorBoundary } from "./components/errors/ErrorBoundary";
 import ContactUnavailable from "./sections/contact/ContactUnavailable";
 import Experience from "./sections/experience/Experience";
@@ -13,7 +14,7 @@ const Contact = lazy(() => import("./sections/contact/Contact"));
 
 const App = () => {
   return (
-    <>
+    <div className="portfolio-page">
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>
@@ -37,7 +38,8 @@ const App = () => {
         </section>
         <Footer />
       </main>
-    </>
+      <ContactRail />
+    </div>
   );
 };
 

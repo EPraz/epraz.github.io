@@ -1,8 +1,10 @@
 # Local portfolio verification
 
-Verified on 2026-10-17 on branch `feat/portfolio-entry-01`. Application candidate:
-`e203885771633a02f1020af4012b71ab8fc288f6`. The approved personal hero remains
-the reference at `3d8f89b`. The integrated page awaits the owner's final review.
+Verified on 2026-10-17 on branch `feat/portfolio-entry-01`. The owner-review
+adjustments follow `6bfad50`: retain the static diagram, remove optional3D,
+extend the ambient background, add a desktop contact rail and replace the printed
+email with a descriptive action. Hero content and the sketch remain intact.
+The integrated page awaits the owner's final visual/editorial review.
 
 ## Run and check
 
@@ -28,14 +30,15 @@ workspace, with this checkout's development server on 5176 and production previe
 on 5177:
 
 ```sh
-node .scratch/portfolio-reconstruction/verify-integrated.mjs
+node .scratch/portfolio-reconstruction/verify-integrated.mjs .design/portfolio-polish
+node .scratch/portfolio-reconstruction/verify-owner-polish.mjs http://127.0.0.1:5177/
+node .scratch/portfolio-reconstruction/verify-contact-rail.mjs
 node .scratch/portfolio-reconstruction/verify-work-slice.mjs http://127.0.0.1:5177/
 node .scratch/portfolio-reconstruction/verify-professional-slice.mjs http://127.0.0.1:5177/
 node .scratch/portfolio-reconstruction/verify-destinations.mjs
-node .scratch/portfolio-reconstruction/verify-media-recovery.mjs
-node .scratch/portfolio-reconstruction/verify-assembly-resize.mjs
-node .scratch/portfolio-reconstruction/verify-assembly-matrix.mjs
-node .scratch/portfolio-reconstruction/verify-assembly-remount.mjs
+node .scratch/portfolio-reconstruction/prepare-polish-qa.mjs
+node .scratch/portfolio-reconstruction/verify-polish-media.mjs
+node .scratch/portfolio-reconstruction/verify-polish-contact.mjs
 ```
 
 Results cover:
@@ -51,38 +54,39 @@ Results cover:
 - Contact validation, pending state, duplicate prevention, rejection, retained
   draft, cooldown/retry, success/reset and missing-configuration email fallback.
   Provider responses are intercepted; no real messages are sent.
-- Optional 3D opt-in, constrained/reduced-motion/data-saving alternatives,
-  delayed/failed module, absent WebGL, slow-frame fallback, context loss,
-  visibility changes, offscreen disposal, bounded drawing and idle.
-- Completed-assembly resizing at 1200, 1320 and 375px, retaining one canvas that
-  fits its stage, and development StrictMode teardown/remount.
+- The static Interface/API/Data diagram remains visible without a graphics
+  control, canvas or renderer download. Earlier3D checks are historical.
+- Fourteen Chrome/Edge rail layouts, including breakpoint and short-viewport
+  boundaries: reserved space, correct destinations, keyboard focus, hoverable
+  labels, Escape dismissal and mobile contact access.
+- Descriptive email actions retain their mailto target in normal, loading,
+  failed-chunk and unconfigured variants; the personal address is not printed.
 
-For the contact simulation, `verify-contact-integrated.mjs` expects local QA
+For the contact simulation, `verify-polish-contact.mjs` expects local QA
 servers on 5178 (dummy EmailJS identifiers) and 5179 (no identifiers). Inspect its
-request interception before running it. Do not use a live provider as a test.
+request interception before running it. Start the isolated variants in separate
+terminals with `node .scratch/portfolio-reconstruction/start-polish-qa.mjs configured`
+and the same command with `unconfigured`. Do not use a live provider as a test.
 
 ## Review and observed limits
 
-Separate Standards and Spec reviews covered `3d8f89b...e203885`. The remaining
-resize finding was corrected: renderer dimensions now follow the container, and
-idle demand frames do not trigger the active-animation slowness detector.
-Targeted re-reviews found no pending issues. No further structural simplification
-was needed for this correction.
+The previous Standards and Spec review reports remain alongside the historical
+delivery evidence. The new review range starts at `6bfad50` and covers only the
+owner's requested refinements. The optional renderer, its preference/visibility
+hooks and its controls are removed; the static component has no scene state.
 
-The deferred graphics dependency is about 167kB gzip. Vite still reports its
-over-500kB raw chunk advisory. It loads only after opt-in; initial verification
-observes no canvas, WebGL module, model or texture request. The measured assembly
-draws for about 1.18 seconds, then idles; offscreen teardown releases its context,
-buffers and program. These are local observations, not physical-device guarantees.
+The production build now emits no AssemblyCanvas graphics chunk or large-chunk
+advisory. Older scene sources outside this page remain archived and unmounted;
+dependencies were not broadly migrated. The CSS background is static, and the
+existing reduced-motion behavior is preserved. No field-performance claim is made.
 
-Local five-run measurements use ordinary motion, cold contexts, desktop CPU 1×
-and mobile CPU 4× on loopback without network throttling. The paired static/final
-comparison met the 150ms median initial-LCP regression budget. A final rerun is
-retained separately; timing variation across sessions is not a speedup claim.
-These measurements are neither field Core Web Vitals nor Lighthouse scores.
+“Send an email” changes how the address is presented, not its secrecy: the real
+destination remains in the mailto link. Browser destination previews are native
+browser UI and are not overridden with script-based navigation.
 
 Raw JSON, screenshots, performance conditions and the separate review reports
-remain in the outer workspace's `.design/portfolio-complete/`; the spec and
+remain in the outer workspace's `.design/portfolio-polish/`; historical evidence
+is preserved in `.design/portfolio-complete/`. The spec and
 per-ticket history remain in `.scratch/portfolio-reconstruction/`. These local
 artifacts and isolated QA tooling are not included by a clean clone. Preserve
 them separately when transferring the local review workspace.

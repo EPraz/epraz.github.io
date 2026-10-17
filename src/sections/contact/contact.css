@@ -11,9 +11,10 @@
   line-height: var(--site-leading-body);
 }
 
-.contact-address {
-  overflow-wrap: anywhere;
-  font-size: var(--site-type-brand);
+.contact-email {
+  margin-block-end: var(--site-space-3);
+  border-color: var(--site-accent);
+  color: var(--site-accent);
 }
 
 .contact-form {

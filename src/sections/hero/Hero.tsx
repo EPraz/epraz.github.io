@@ -1,7 +1,6 @@
 import HeroTextContent from "./HeroTextContent";
 import ProfilePanel from "./ProfilePanel";
 import "./hero.css";
-import "./hero-atmosphere.css";
 
 const Hero = () => {
   return (

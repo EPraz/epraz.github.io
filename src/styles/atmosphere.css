@@ -1,39 +1,36 @@
-.intro {
+.portfolio-page {
   position: relative;
   isolation: isolate;
+  min-height: 100svh;
 }
 
-.intro::before,
-.intro::after {
+.portfolio-page::before,
+.portfolio-page::after {
   position: absolute;
   z-index: -1;
   inset: 0;
-  /* Continue the entry backdrop behind the floating header and its margins. */
-  inset-block-start: calc(0px - var(--site-header-space));
   content: "";
   pointer-events: none;
 }
 
-.intro::before {
+.portfolio-page::before {
   background:
     radial-gradient(ellipse at 90% 15%, var(--site-ambient-warm), transparent 58%),
     radial-gradient(ellipse at 10% 85%, var(--site-ambient-cool), transparent 65%),
     var(--site-bg);
 }
 
-.intro::after {
+.portfolio-page::after {
   background-image: radial-gradient(var(--site-ambient-dot) var(--site-rule), transparent var(--site-rule));
   background-size: var(--site-space-7) var(--site-space-7);
-  mask-image: radial-gradient(ellipse at 70% 40%, black, transparent 75%);
+  mask-image:
+    linear-gradient(to right, transparent, black 70%, transparent),
+    linear-gradient(to bottom, black 90svh, var(--site-reading-texture-mask) 125svh);
+  mask-composite: intersect;
 }
 
-@keyframes intro-profile-arrive {
-  from {
-    opacity: 0.65;
-    transform: translateY(var(--site-space-3));
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (min-width: 80rem) and (min-height: 30rem) {
+  .portfolio-page {
+    padding-inline: var(--site-rail-space);
   }
 }

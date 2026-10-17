@@ -1,0 +1,83 @@
+.contact-rail {
+  display: none;
+}
+
+@media (min-width: 80rem) and (min-height: 30rem) {
+  .contact-rail {
+    position: fixed;
+    z-index: 80;
+    inset-block-start: 50%;
+    inset-inline-end: var(--site-space-4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--site-space-5);
+    width: var(--site-touch-target);
+    transform: translateY(-50%);
+  }
+
+  .contact-rail::before,
+  .contact-rail::after {
+    width: var(--site-rule);
+    height: var(--site-rail-rule-height);
+    background: var(--site-border);
+    content: "";
+  }
+
+  .contact-rail ul {
+    display: grid;
+    gap: var(--site-space-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .contact-rail a {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: var(--site-touch-target);
+    height: var(--site-touch-target);
+    border-radius: var(--site-radius);
+    color: var(--site-muted);
+  }
+
+  .contact-rail svg {
+    width: var(--site-space-5);
+    height: var(--site-space-5);
+  }
+
+  .contact-rail a:is(:hover, :focus-visible) {
+    color: var(--site-accent);
+  }
+
+  .contact-rail a:focus-visible {
+    outline: var(--site-focus-width) solid var(--site-focus);
+    outline-offset: var(--site-space-1);
+  }
+
+  .contact-rail span {
+    position: absolute;
+    inset-inline-end: calc(100% + var(--site-space-2));
+    width: max-content;
+    padding: var(--site-space-2) var(--site-space-3);
+    border: var(--site-rule) solid var(--site-border);
+    border-radius: var(--site-radius);
+    background: var(--site-bg);
+    color: var(--site-text);
+    font-size: var(--site-type-small);
+    visibility: hidden;
+  }
+
+  .contact-rail span::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-start: 100%;
+    width: var(--site-space-2);
+    content: "";
+  }
+
+  .contact-rail[data-hint-dismissed="false"] a:is(:hover, :focus-visible) span {
+    visibility: visible;
+  }
+}

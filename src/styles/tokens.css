@@ -65,6 +65,9 @@
   --site-ambient-warm: color-mix(in srgb, var(--site-accent) 14%, transparent);
   --site-ambient-cool: color-mix(in srgb, var(--site-link) 8%, transparent);
   --site-ambient-dot: color-mix(in srgb, var(--site-link) 32%, transparent);
+  --site-reading-texture-mask: rgb(0 0 0 / 38%);
+  --site-rail-space: var(--site-space-10);
+  --site-rail-rule-height: clamp(var(--site-space-7), 12svh, var(--site-space-11));
   --site-ease: cubic-bezier(0.2, 0, 0, 1);
 }
 
