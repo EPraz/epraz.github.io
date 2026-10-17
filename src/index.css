@@ -2,6 +2,7 @@
 @import "./styles/fonts.css";
 @import "./styles/tokens.css";
 @import "./styles/page.css";
+@import "./styles/sections.css";
 
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);

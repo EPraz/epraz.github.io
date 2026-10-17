@@ -1,0 +1,117 @@
+.featured-overview,
+.featured-evidence {
+  display: grid;
+  gap: var(--site-space-7);
+}
+
+.featured-story {
+  display: grid;
+  align-content: start;
+  gap: var(--site-space-5);
+}
+
+.featured-story > p,
+.featured-evidence p {
+  color: var(--site-muted);
+  line-height: var(--site-leading-body);
+}
+
+.featured-story .featured-subtitle {
+  color: var(--site-text);
+  font-size: var(--site-type-lead);
+}
+
+.featured-role {
+  font: var(--site-type-small) var(--site-font-mono);
+}
+
+.featured-capture {
+  min-width: 0;
+  margin: 0;
+}
+
+.featured-image {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1440 / 1100;
+  overflow: hidden;
+  border: var(--site-rule) solid var(--site-border);
+  border-radius: var(--site-radius);
+  background: var(--site-surface);
+}
+
+.featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.featured-image > p {
+  padding: var(--site-space-5);
+  color: var(--site-muted);
+  text-align: center;
+  line-height: var(--site-leading-body);
+}
+
+.featured-capture figcaption {
+  margin-block-start: var(--site-space-3);
+  color: var(--site-muted);
+  font-size: var(--site-type-small);
+  line-height: var(--site-leading-body);
+}
+
+.featured-evidence {
+  margin-block-start: var(--site-space-8);
+  padding-block: var(--site-space-7);
+  border-block: var(--site-rule) solid var(--site-border);
+}
+
+.featured-evidence h3 {
+  margin-block-end: var(--site-space-4);
+  font-family: var(--site-font-display);
+  font-size: var(--site-type-statement);
+  line-height: var(--site-leading-statement);
+}
+
+.evidence-steps {
+  display: grid;
+  gap: var(--site-space-5);
+  padding-inline-start: var(--site-space-5);
+  list-style: decimal;
+}
+
+.evidence-steps li {
+  padding-inline-start: var(--site-space-2);
+}
+
+.evidence-steps li::marker {
+  color: var(--site-accent);
+  font-family: var(--site-font-mono);
+}
+
+.evidence-steps h4 {
+  margin-block-end: var(--site-space-2);
+  font-weight: 500;
+}
+
+.featured-footnote {
+  display: grid;
+  gap: var(--site-space-4);
+  margin-block-start: var(--site-space-5);
+  color: var(--site-muted);
+  font-size: var(--site-type-small);
+  line-height: var(--site-leading-body);
+}
+
+@media (min-width: 64rem) {
+  .featured-overview {
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: var(--site-space-9);
+  }
+
+  .featured-evidence {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--site-space-9);
+  }
+}
