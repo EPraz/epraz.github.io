@@ -81,7 +81,14 @@
   line-height: var(--site-leading-body);
 }
 
-.contact-help .site-link {
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--site-space-3) var(--site-space-5);
+}
+
+.contact-actions .site-link {
   width: fit-content;
   padding: 0;
   background: transparent;

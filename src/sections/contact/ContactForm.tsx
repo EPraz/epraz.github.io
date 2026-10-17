@@ -17,10 +17,12 @@ const ContactForm = () => {
       <ContactField name="message" label="Message" value={values.message} error={errors.message} onChange={handleChange} />
       <input type="text" name="company" tabIndex={-1} autoComplete="off" aria-hidden="true" className="contact-honeypot" />
       {feedback && <ContactFeedback feedback={feedback} />}
-      <button type="submit" disabled={isSubmitDisabled} className="site-button site-button-primary">{buttonLabel}</button>
-      <p id="contact-help" role="status" className="contact-help">
-        {isCoolingDown && <>Please wait a few seconds before sending another message.<br /></>}
+      <div className="contact-actions">
+        <button type="submit" disabled={isSubmitDisabled} className="site-button site-button-primary">{buttonLabel}</button>
         <a className="site-link" href={contactLinks.mailto}>Prefer your email app?</a>
+      </div>
+      <p id="contact-help" role="status" className="contact-help">
+        {isCoolingDown ? "Please wait a few seconds before sending another message." : ""}
       </p>
       {!isEmailEnabled && <p className="contact-unavailable">The form is temporarily unavailable. Please use the email link.</p>}
     </form>

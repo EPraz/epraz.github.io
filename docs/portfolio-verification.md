@@ -65,8 +65,8 @@ Results cover:
   clipping without creating a second scroll container that defeats stickiness.
 - Descriptive email actions retain their mailto target in normal, loading,
   failed-chunk and unconfigured variants; the personal address is not printed.
-  The normal form presents “Prefer your email app?” as a secondary link below
-  its submit action, including during retry cooldown.
+  The normal form presents “Prefer your email app?” beside its submit action,
+  including during retry cooldown, wrapping only when space is insufficient.
 
 For the contact simulation, `verify-polish-contact.mjs` expects local QA
 servers on 5178 (dummy EmailJS identifiers) and 5179 (no identifiers). Inspect its
