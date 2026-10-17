@@ -33,6 +33,7 @@ on 5177:
 node .scratch/portfolio-reconstruction/verify-integrated.mjs .design/portfolio-polish
 node .scratch/portfolio-reconstruction/verify-owner-polish.mjs http://127.0.0.1:5177/
 node .scratch/portfolio-reconstruction/verify-contact-rail.mjs
+node .scratch/portfolio-reconstruction/verify-sticky-header.mjs
 node .scratch/portfolio-reconstruction/verify-work-slice.mjs http://127.0.0.1:5177/
 node .scratch/portfolio-reconstruction/verify-professional-slice.mjs http://127.0.0.1:5177/
 node .scratch/portfolio-reconstruction/verify-destinations.mjs
@@ -59,6 +60,9 @@ Results cover:
 - Fourteen Chrome/Edge rail layouts, including breakpoint and short-viewport
   boundaries: reserved space, correct destinations, keyboard focus, hoverable
   labels, Escape dismissal and mobile contact access.
+- Twenty section destinations at mobile/tablet/desktop widths retain the sticky
+  header and land below it. The inherited horizontal-overflow rule now uses
+  clipping without creating a second scroll container that defeats stickiness.
 - Descriptive email actions retain their mailto target in normal, loading,
   failed-chunk and unconfigured variants; the personal address is not printed.
 
@@ -83,6 +87,8 @@ existing reduced-motion behavior is preserved. No field-performance claim is mad
 “Send an email” changes how the address is presented, not its secrecy: the real
 destination remains in the mailto link. Browser destination previews are native
 browser UI and are not overridden with script-based navigation.
+Rail labels support Escape for both hover-only and keyboard-focus interaction;
+their document listener is removed during cleanup.
 
 Raw JSON, screenshots, performance conditions and the separate review reports
 remain in the outer workspace's `.design/portfolio-polish/`; historical evidence

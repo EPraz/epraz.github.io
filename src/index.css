@@ -12,7 +12,8 @@
 html,
 body {
   width: 100%;
-  overflow-x: hidden;
+  /* Clip sideways overflow without creating an ancestor scroll container. */
+  overflow-x: clip;
   background: var(--site-bg);
   color: var(--site-text);
   scroll-behavior: smooth;

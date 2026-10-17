@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { contactLinks } from "../contants/contact";
 import "./ContactRail.css";
 
@@ -20,14 +20,20 @@ const contacts = [
 const ContactRail = () => {
   const [hintDismissed, setHintDismissed] = useState(false);
 
+  useEffect(() => {
+    if (hintDismissed) return;
+    const dismissHint = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setHintDismissed(true);
+    };
+    document.addEventListener("keydown", dismissHint);
+    return () => document.removeEventListener("keydown", dismissHint);
+  }, [hintDismissed]);
+
   return (
     <nav
       className="contact-rail"
       aria-label="Contact shortcuts"
       data-hint-dismissed={hintDismissed}
-      onKeyDown={(event) => {
-        if (event.key === "Escape") setHintDismissed(true);
-      }}
     >
       <ul>
         {contacts.map(({ label, href, external, icon }) => (
