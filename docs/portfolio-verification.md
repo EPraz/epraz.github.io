@@ -281,3 +281,14 @@ cover seven widths, keyboard actions, image decoding, missing-image recovery,
 layout and WCAG A/AA axe checks. Responsive section and full-page screenshots
 were visually inspected at 375, 768 and 1280 px. Local evidence and theme
 comparison: `.design/aster-live/`. Contact was not submitted.
+
+## Project Management temporary demo suspension — 2026-10-18
+
+At the owner's request, Project Management now says In development and its demo
+URL/action is removed while the app is being updated. The capture, summary and
+public source remain. The note explains temporary demo unavailability; missing
+preview feedback points to the code. A typed availability variant prevents an
+in-development entry from carrying a live URL. Other project actions are unchanged.
+Types, lint, build and six responsive/keyboard/accessibility/image-failure checks
+pass. Mobile, tablet and desktop screenshots were inspected. Local evidence:
+`.design/pm-development/`. No form submission or email sending.

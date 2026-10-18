@@ -10,12 +10,13 @@ export type SupportingProjectData = {
   coverAlt: string;
   width: number;
   height: number;
-  liveUrl: string;
-  liveLabel: string;
   repoUrl?: string;
   walkthroughUrl?: string;
   note: string;
-};
+} & (
+  | { status: "live"; liveUrl: string; liveLabel: string }
+  | { status: "in-development"; liveUrl?: never; liveLabel?: never }
+);
 
 export const supportingProjects: SupportingProjectData[] = [
   {
@@ -27,16 +28,16 @@ export const supportingProjects: SupportingProjectData[] = [
     stack: ["React", "TypeScript", "NestJS", "PostgreSQL", "Socket.IO"],
     cover: "./images/portfolio/project-management-taskboard.webp",
     coverAlt:
-      "Project Management's live Launchpad taskboard, with fictional tickets and tasks arranged in workflow columns from Todo to Done.",
+      "Project Management's Launchpad taskboard, with fictional tickets and tasks arranged in workflow columns from Todo to Done.",
     width: 1440,
     height: 1000,
-    liveUrl: "https://project-management-murex-pi.vercel.app/",
-    liveLabel: "Explore demo",
+    status: "in-development",
     repoUrl: "https://github.com/EPraz/projectManagement",
-    note: "Shared, editable demo with fictional data. First access may take about a minute.",
+    note: "Demo temporarily unavailable while the project is being updated.",
   },
   {
     id: "navigate",
+    status: "live",
     title: navigateProject.title,
     category: "Frontend website",
     summary:
@@ -52,6 +53,7 @@ export const supportingProjects: SupportingProjectData[] = [
   },
   {
     id: "aster",
+    status: "live",
     title: "Aster",
     category: "Sales & marketing dashboard",
     summary:

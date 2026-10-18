@@ -45,8 +45,10 @@ observations, recorded in the local reconstruction workspace.
   the evidence and its synthetic-data/shared-account context. Its deeper
   explanation and local conflict capture are available in a native disclosure.
   Explore demo is its primary action. Project Management
-  and NAVIGATE join Aster as supporting project rows with live destinations.
-  Project Management uses a current cloud-demo taskboard capture and links its
+  and NAVIGATE join Aster as supporting project rows. Project Management is
+  temporarily In development with its demo link removed during owner updates;
+  its capture and public source remain available. NAVIGATE and Aster stay live.
+  Project Management uses a taskboard capture and links its
   public source; NAVIGATE opens https://navigate-marine.vercel.app/ and keeps its
   source private. The Projects navigation label and View projects action retain
   the existing `#work` anchor.

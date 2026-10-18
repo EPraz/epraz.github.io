@@ -10,7 +10,7 @@ const SupportingProject = ({ project }: { project: SupportingProjectData }) => {
     <article className="supporting-project" aria-labelledby={titleId}>
       <div className="supporting-project-media">
         {imageUnavailable ? (
-          <p role="status">Preview unavailable. You can still open the live project below.</p>
+          <p role="status">{project.status === "live" ? "Preview unavailable. You can still open the live project below." : "Preview unavailable. You can still view the code below."}</p>
         ) : (
           <img src={project.cover} alt={project.coverAlt} width={project.width} height={project.height} loading="lazy" decoding="async" onError={() => setImageUnavailable(true)} />
         )}
@@ -23,7 +23,11 @@ const SupportingProject = ({ project }: { project: SupportingProjectData }) => {
           {project.stack.map((tool) => <li key={tool}>{tool}</li>)}
         </ul>
         <div className="section-actions">
-          <a className="site-link" href={project.liveUrl} target="_blank" rel="noreferrer">{project.liveLabel} <span aria-hidden="true">↗</span></a>
+          {project.status === "live" ? (
+            <a className="site-link" href={project.liveUrl} target="_blank" rel="noreferrer">{project.liveLabel} <span aria-hidden="true">↗</span></a>
+          ) : (
+            <span className="section-kicker">In development</span>
+          )}
           {project.repoUrl && <a className="site-link" href={project.repoUrl} target="_blank" rel="noreferrer">View code</a>}
           {project.walkthroughUrl && <a className="site-link" href={project.walkthroughUrl} target="_blank" rel="noreferrer">Watch walkthrough</a>}
         </div>
