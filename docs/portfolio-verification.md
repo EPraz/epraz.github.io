@@ -292,3 +292,28 @@ in-development entry from carrying a live URL. Other project actions are unchang
 Types, lint, build and six responsive/keyboard/accessibility/image-failure checks
 pass. Mobile, tablet and desktop screenshots were inspected. Local evidence:
 `.design/pm-development/`. No form submission or email sending.
+
+## Project Management refresh and Exploradores del Rey — 2026-10-18
+
+The owner completed the Project Management redesign and requested reactivation
+with its new video. Its portfolio row now uses a real hosted Orbit overview
+capture, restores Explore demo and links the independent public walkthrough.
+Both actual appearances were inspected; Light is selected for thumbnail clarity.
+The cold-start/shared-editable-data note remains. Caption and MP4 range delivery
+are verified from the published application; no project content was edited.
+
+Exploradores del Rey is added from the current ER-LandigPage develop branch,
+with its approved fictional-data admin screenshot in Petrol & Apricot. The owner
+confirmed no public demo URL is available and requested the existing walkthrough.
+The row links public source and an exact copy of its reviewed Spanish MP4, hosted
+as a standalone portfolio asset. Public demo coming soon is plain status text;
+there is no fake Visit website button or inferred old deployment destination.
+The client app and its deployment are unchanged. The homepage downloads no video.
+
+Types, lint, strict conventions and build pass. Eleven browser journeys cover
+seven widths, five project entries, real destinations, keyboard focus, disclosure,
+missing-preview recovery, no overflow and zero detected WCAG A/AA axe findings.
+ER's copied video matches its source hash and passes HTTP 206, MIME, metadata,
+seeking and native playback checks. Section and full-page screenshots were
+inspected at mobile/tablet/desktop sizes. Evidence: `.design/projects-refresh/`.
+Contact was not submitted and no business records were changed.

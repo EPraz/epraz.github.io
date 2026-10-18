@@ -26,10 +26,10 @@ const SupportingProject = ({ project }: { project: SupportingProjectData }) => {
           {project.status === "live" ? (
             <a className="site-link" href={project.liveUrl} target="_blank" rel="noreferrer">{project.liveLabel} <span aria-hidden="true">↗</span></a>
           ) : (
-            <span className="section-kicker">In development</span>
+            <span className="section-kicker">{project.status === "unpublished" ? "Public demo coming soon" : "In development"}</span>
           )}
           {project.repoUrl && <a className="site-link" href={project.repoUrl} target="_blank" rel="noreferrer">View code</a>}
-          {project.walkthroughUrl && <a className="site-link" href={project.walkthroughUrl} target="_blank" rel="noreferrer">Watch walkthrough</a>}
+          {project.walkthroughUrl && <a className="site-link" href={project.walkthroughUrl} target="_blank" rel="noreferrer">{project.walkthroughLabel ?? "Watch walkthrough"}</a>}
         </div>
         <p className="supporting-project-note">{project.note}</p>
       </div>

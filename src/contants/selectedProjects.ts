@@ -12,10 +12,11 @@ export type SupportingProjectData = {
   height: number;
   repoUrl?: string;
   walkthroughUrl?: string;
+  walkthroughLabel?: string;
   note: string;
 } & (
   | { status: "live"; liveUrl: string; liveLabel: string }
-  | { status: "in-development"; liveUrl?: never; liveLabel?: never }
+  | { status: "in-development" | "unpublished"; liveUrl?: never; liveLabel?: never }
 );
 
 export const supportingProjects: SupportingProjectData[] = [
@@ -24,16 +25,19 @@ export const supportingProjects: SupportingProjectData[] = [
     title: "Project Management",
     category: "Full-stack application",
     summary:
-      "Plan sprints, organize backlogs and track work across a drag-and-drop board. A React interface connects project planning and retrospectives to a NestJS API and PostgreSQL.",
+      "Plan sprints, track tickets and tasks, and review delivery together. A React workspace connects to a NestJS API and PostgreSQL, with real-time updates across sessions.",
     stack: ["React", "TypeScript", "NestJS", "PostgreSQL", "Socket.IO"],
-    cover: "./images/portfolio/project-management-taskboard.webp",
+    cover: "./images/portfolio/project-management-overview.webp",
     coverAlt:
-      "Project Management's Launchpad taskboard, with fictional tickets and tasks arranged in workflow columns from Todo to Done.",
+      "Project Management's redesigned Orbit overview, showing project progress, selected sprint metrics and ticket states with fictional demo data.",
     width: 1440,
     height: 1000,
-    status: "in-development",
+    status: "live",
+    liveUrl: "https://project-management-murex-pi.vercel.app/",
+    liveLabel: "Explore demo",
     repoUrl: "https://github.com/EPraz/projectManagement",
-    note: "Demo temporarily unavailable while the project is being updated.",
+    walkthroughUrl: "https://project-management-murex-pi.vercel.app/walkthrough",
+    note: "Shared, editable demo with fictional data. The API may take about a minute to wake; the video opens independently.",
   },
   {
     id: "navigate",
@@ -69,5 +73,23 @@ export const supportingProjects: SupportingProjectData[] = [
     repoUrl: "https://github.com/EPraz/dashboard",
     walkthroughUrl: "https://dashboard-one-rose-14.vercel.app/walkthrough",
     note: "Fictional data. Changes stay in your browser; no account or real payments.",
+  },
+  {
+    id: "exploradores",
+    status: "unpublished",
+    title: "Exploradores del Rey",
+    category: "Full-stack website & CMS",
+    summary:
+      "A website and admin workspace for managing content, events and images. Preview changes before publishing and review who changed what through the activity log.",
+    stack: ["React", "Express", "PostgreSQL", "Better Auth"],
+    cover: "./images/portfolio/exploradores-admin.webp",
+    coverAlt:
+      "Exploradores del Rey's admin panel in Petrol & Apricot, with homepage editing fields and a responsive preview using fictional content.",
+    width: 1440,
+    height: 760,
+    repoUrl: "https://github.com/emr1195/ER-LandigPage/tree/develop",
+    walkthroughUrl: "./walkthrough/exploradores-walkthrough.mp4",
+    walkthroughLabel: "Watch walkthrough (ES)",
+    note: "Client project. The walkthrough uses fictional content; the public demo is not available yet.",
   },
 ];

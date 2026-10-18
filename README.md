@@ -45,11 +45,12 @@ observations, recorded in the local reconstruction workspace.
   the evidence and its synthetic-data/shared-account context. Its deeper
   explanation and local conflict capture are available in a native disclosure.
   Explore demo is its primary action. Project Management
-  and NAVIGATE join Aster as supporting project rows. Project Management is
-  temporarily In development with its demo link removed during owner updates;
-  its capture and public source remain available. NAVIGATE and Aster stay live.
-  Project Management uses a taskboard capture and links its
-  public source; NAVIGATE opens https://navigate-marine.vercel.app/ and keeps its
+  and NAVIGATE join Aster and Exploradores del Rey as supporting project rows.
+  Project Management is live again, with its redesigned Orbit overview, source
+  and independent walkthrough. Exploradores del Rey shows its admin panel with
+  fictional content, public source and a Spanish walkthrough hosted as an MP4
+  in this portfolio; its public demo is not available yet. The video is loaded
+  only when opened. NAVIGATE opens https://navigate-marine.vercel.app/ and keeps its
   source private. The Projects navigation label and View projects action retain
   the existing `#work` anchor.
 - **Experience:** two employment entries, education and languages aligned with
