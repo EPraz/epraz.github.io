@@ -70,29 +70,6 @@
   font-size: var(--site-type-small);
 }
 
-.project-placeholder {
-  place-content: center;
-  gap: var(--site-space-2);
-  border-style: dashed;
-}
-
-.project-placeholder svg {
-  width: var(--site-space-8);
-  height: var(--site-space-8);
-  color: var(--site-muted);
-}
-
-.project-placeholder > p {
-  padding: 0;
-}
-
-.project-development-status {
-  color: var(--site-accent);
-  font-size: var(--site-type-small);
-  font-family: var(--site-font-mono);
-  line-height: var(--site-leading-body);
-}
-
 @media (min-width: 48rem) {
   .supporting-project {
     grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.5fr);

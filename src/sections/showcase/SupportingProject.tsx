@@ -25,6 +25,7 @@ const SupportingProject = ({ project }: { project: SupportingProjectData }) => {
         <div className="section-actions">
           <a className="site-link" href={project.liveUrl} target="_blank" rel="noreferrer">{project.liveLabel} <span aria-hidden="true">↗</span></a>
           {project.repoUrl && <a className="site-link" href={project.repoUrl} target="_blank" rel="noreferrer">View code</a>}
+          {project.walkthroughUrl && <a className="site-link" href={project.walkthroughUrl} target="_blank" rel="noreferrer">Watch walkthrough</a>}
         </div>
         <p className="supporting-project-note">{project.note}</p>
       </div>

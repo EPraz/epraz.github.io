@@ -5,13 +5,14 @@ Public content is in English. The site is published at https://epraz.github.io/
 through the repository's GitHub Pages workflow.
 
 The owner approved the compact Projects layout, project captures, concise Skills
-copy and Aster upcoming row for publication.
+copy and Aster project row.
 
 Projects keeps a compact Keelwatch flagship above horizontal supporting project
 rows. Rows stack on mobile.
-Aster, the current project in `GIT/dashboard`, has its own upcoming row with a
-source-backed sales/marketing description, a labelled preview placeholder and
-In development status. It has no public action or actual screenshot yet.
+Aster, the project in `GIT/dashboard`, now shows a real light-theme overview
+capture and links to its live demo, public source and walkthrough. This frontend
+demo connects leads, sales, inventory and campaign reporting using fictional
+records stored in the visitor's browser; it has no account or real payments.
 
 ## Run locally
 
@@ -44,7 +45,7 @@ observations, recorded in the local reconstruction workspace.
   the evidence and its synthetic-data/shared-account context. Its deeper
   explanation and local conflict capture are available in a native disclosure.
   Explore demo is its primary action. Project Management
-  and NAVIGATE form a pair of supporting project rows with live destinations.
+  and NAVIGATE join Aster as supporting project rows with live destinations.
   Project Management uses a current cloud-demo taskboard capture and links its
   public source; NAVIGATE opens https://navigate-marine.vercel.app/ and keeps its
   source private. The Projects navigation label and View projects action retain

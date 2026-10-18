@@ -260,3 +260,24 @@ are included in this release. Aster has no public action or actual screenshot.
 The existing GitHub Pages workflow and contact configuration are retained.
 Post-deployment verification is recorded in the local publication evidence;
 contact checks are read-only and do not submit the form.
+
+## Aster live project integration — 2026-10-17
+
+The owner reported Aster complete and requested its portfolio integration,
+including selection between its two themes. Both themes were captured from
+https://dashboard-one-rose-14.vercel.app/dashboard. The light Petrol & apricot
+palette was selected for its relation to the portfolio's ink/copper and its
+chart clarity at thumbnail size. The real 1440 × 1000 capture is a 75 KB WebP.
+
+Aster now uses the same supporting-project component as the other live projects.
+Its demo, public GitHub source and walkthrough replace the old placeholder and
+In development status. Copy describes the actual frontend workflow and fictional
+browser-local data, without backend, account or real-payment claims. The former
+upcoming component and unused status styles are removed. No sibling app files
+or business records were modified; only appearance was toggled for capture.
+
+Types, lint, strict convention audit and build pass. Eleven browser journeys
+cover seven widths, keyboard actions, image decoding, missing-image recovery,
+layout and WCAG A/AA axe checks. Responsive section and full-page screenshots
+were visually inspected at 375, 768 and 1280 px. Local evidence and theme
+comparison: `.design/aster-live/`. Contact was not submitted.

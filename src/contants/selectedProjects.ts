@@ -13,6 +13,7 @@ export type SupportingProjectData = {
   liveUrl: string;
   liveLabel: string;
   repoUrl?: string;
+  walkthroughUrl?: string;
   note: string;
 };
 
@@ -49,14 +50,22 @@ export const supportingProjects: SupportingProjectData[] = [
     liveLabel: "Visit website",
     note: "Live bilingual website. Source repository private.",
   },
+  {
+    id: "aster",
+    title: "Aster",
+    category: "Sales & marketing dashboard",
+    summary:
+      "A frontend workspace for a fictional audio store. Record demo sales and follow their impact across revenue, inventory and campaign results.",
+    stack: ["React Native Web", "Expo", "TypeScript", "Playwright"],
+    cover: "./images/portfolio/aster-overview.webp",
+    coverAlt:
+      "Aster's live dashboard in its light theme, with sales metrics, a revenue chart and campaign results for a fictional audio store.",
+    width: 1440,
+    height: 1000,
+    liveUrl: "https://dashboard-one-rose-14.vercel.app/dashboard",
+    liveLabel: "Explore demo",
+    repoUrl: "https://github.com/EPraz/dashboard",
+    walkthroughUrl: "https://dashboard-one-rose-14.vercel.app/walkthrough",
+    note: "Fictional data. Changes stay in your browser; no account or real payments.",
+  },
 ];
-
-export const upcomingProject = {
-  id: "aster",
-  title: "Aster",
-  category: "Sales & marketing dashboard",
-  summary:
-    "A frontend workspace for a fictional audio store, connecting leads, purchases and inventory.",
-  stack: ["React Native Web", "Expo", "TypeScript"],
-  status: "In development",
-};
