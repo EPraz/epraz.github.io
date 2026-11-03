@@ -75,6 +75,25 @@ export const supportingProjects: SupportingProjectData[] = [
     note: "Fictional data. Changes stay in your browser; no account or real payments.",
   },
   {
+    id: "bruma",
+    status: "live",
+    title: "Bruma Café",
+    category: "Coffee storefront",
+    summary:
+      "A responsive coffee store in English, Spanish and Portuguese. Explore origins, choose product variants and complete a simulated purchase with a persistent cart and discount codes.",
+    stack: ["React", "TypeScript", "i18next", "Playwright"],
+    cover: "./images/portfolio/bruma-overview.webp",
+    coverAlt:
+      "Bruma Café's live English storefront, with its coffee-roasting photograph, origin-led introduction and link to explore the coffees.",
+    width: 1440,
+    height: 1000,
+    liveUrl: "https://coffee-shop-app-nine-lilac.vercel.app/",
+    liveLabel: "Explore demo",
+    repoUrl: "https://github.com/EPraz/coffee-shop-app",
+    walkthroughUrl: "https://coffee-shop-app-nine-lilac.vercel.app/walkthrough",
+    note: "Fictional brand. Cart saved in your browser; checkout is simulated, with no real payments or orders.",
+  },
+  {
     id: "exploradores",
     status: "unpublished",
     title: "Exploradores del Rey",
