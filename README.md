@@ -45,12 +45,16 @@ observations, recorded in the local reconstruction workspace.
   the evidence and its synthetic-data/shared-account context. Its deeper
   explanation and local conflict capture are available in a native disclosure.
   Explore demo is its primary action. Project Management
-  and NAVIGATE join Aster, Bruma Café and Exploradores del Rey as supporting
-  project rows.
+  and NAVIGATE join Aster, Bruma Café, Jerskits and Exploradores del Rey as
+  supporting project rows.
   Bruma Café links to its trilingual React storefront, public source and
   72-second walkthrough. Its real storefront capture accompanies the product
   variants, persistent cart and simulated checkout; no real payments or orders
   are processed.
+  Jerskits shows its real Liverpool hero and links to the trilingual football-shirt
+  storefront, public source and 35-second product showcase. Size availability,
+  catalogue filters and a persistent bag support a simulated guest checkout;
+  it has no real payments or deliveries.
   Project Management is live again, with its redesigned Orbit overview, source
   and independent walkthrough. Exploradores del Rey shows its admin panel with
   fictional content, public source and a Spanish walkthrough hosted as an MP4

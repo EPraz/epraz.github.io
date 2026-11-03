@@ -94,6 +94,26 @@ export const supportingProjects: SupportingProjectData[] = [
     note: "Fictional brand. Cart saved in your browser; checkout is simulated, with no real payments or orders.",
   },
   {
+    id: "jerskits",
+    status: "live",
+    title: "Jerskits",
+    category: "Football-shirt storefront",
+    summary:
+      "A trilingual football-shirt store with team, size and price filters. Choose available sizes, manage a persistent bag and complete a simulated guest checkout.",
+    stack: ["React", "TypeScript", "i18next", "Playwright"],
+    cover: "./images/portfolio/jerskits-overview.webp",
+    coverAlt:
+      "Jerskits' live English storefront, featuring the Liverpool shirt over oversized club typography with collection and product links.",
+    width: 1440,
+    height: 1000,
+    liveUrl: "https://jerskits-marketplace.vercel.app/",
+    liveLabel: "Explore demo",
+    repoUrl: "https://github.com/EPraz/jerskits-marketplace",
+    walkthroughUrl: "https://jerskits-marketplace.vercel.app/walkthrough",
+    walkthroughLabel: "Watch showcase (0:35)",
+    note: "Independent portfolio concept. Checkout is simulated; no real payments or deliveries.",
+  },
+  {
     id: "exploradores",
     status: "unpublished",
     title: "Exploradores del Rey",
