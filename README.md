@@ -47,10 +47,12 @@ observations, recorded in the local reconstruction workspace.
   Explore demo is its primary action. Project Management
   and NAVIGATE join Aster, Bruma Café, Jerskits and Exploradores del Rey as
   supporting project rows.
-  Bruma Café links to its trilingual React storefront, public source and
-  72-second walkthrough. Its real storefront capture accompanies the product
-  variants, persistent cart and simulated checkout; no real payments or orders
-  are processed.
+  Bruma Café connects a trilingual React storefront to a NestJS API, Prisma and
+  PostgreSQL. Its real public admin-studio capture shows shared demo sales,
+  orders and stock reporting. Server-priced purchases, stock updates and order
+  states are persisted by the backend; payments and deliveries remain simulated.
+  The refreshed 81-second walkthrough includes the connected store and studio.
+  Shared demo data and possible API wake-up delay are explained beside its links.
   Jerskits shows its real Liverpool hero and links to the trilingual football-shirt
   storefront, public source and 35-second product showcase. Size availability,
   catalogue filters and a persistent bag support a simulated guest checkout;
